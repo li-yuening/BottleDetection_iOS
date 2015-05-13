@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AllBottleSearchViewController.h
 //  BottleDetection2
 //
 //  Created by Li Yuening on 15/5/2.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
-
+@interface AllBottleSearchViewController : UITableViewController
 
 @end
-

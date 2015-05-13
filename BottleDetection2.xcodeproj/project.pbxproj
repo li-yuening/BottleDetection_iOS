@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */; };
+		AD8BFD161B030D4800D7D053 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD151B030D4800D7D053 /* LaunchScreen.xib */; };
+		AD8BFD191B030EEA00D7D053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD181B030EEA00D7D053 /* Main.storyboard */; };
+		AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */; };
+		ADA10C801B01F3A5009293E2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */; };
 		ADE34BDA1AF4E08D00232DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BD91AF4E08D00232DCB /* main.m */; };
 		ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BDC1AF4E08D00232DCB /* AppDelegate.m */; };
 		ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BDF1AF4E08D00232DCB /* ViewController.m */; };
-		ADE34BE31AF4E08D00232DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE34BE11AF4E08D00232DCB /* Main.storyboard */; };
 		ADE34BE51AF4E08D00232DCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE34BE41AF4E08D00232DCB /* Images.xcassets */; };
-		ADE34BE81AF4E08D00232DCB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE34BE61AF4E08D00232DCB /* LaunchScreen.xib */; };
 		ADE34BF41AF4E08D00232DCB /* BottleDetection2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BF31AF4E08D00232DCB /* BottleDetection2Tests.m */; };
+		ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BFE1AF4E3D600232DCB /* MainViewController.m */; };
+		ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */; };
+		ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveBottleViewController.h; sourceTree = "<group>"; };
+		AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveBottleViewController.m; sourceTree = "<group>"; };
+		AD8BFD151B030D4800D7D053 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		AD8BFD181B030EEA00D7D053 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleDetection2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE34BD81AF4E08D00232DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE34BD91AF4E08D00232DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,12 +48,16 @@
 		ADE34BDC1AF4E08D00232DCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ADE34BDE1AF4E08D00232DCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ADE34BDF1AF4E08D00232DCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ADE34BE21AF4E08D00232DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADE34BE41AF4E08D00232DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ADE34BE71AF4E08D00232DCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ADE34BED1AF4E08D00232DCB /* BottleDetection2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottleDetection2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE34BF21AF4E08D00232DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE34BF31AF4E08D00232DCB /* BottleDetection2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottleDetection2Tests.m; sourceTree = "<group>"; };
+		ADE34BFD1AF4E3D600232DCB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		ADE34BFE1AF4E3D600232DCB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		ADE34C001AF4F8CD00232DCB /* AllBottleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBottleSearchViewController.h; sourceTree = "<group>"; };
+		ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBottleSearchViewController.m; sourceTree = "<group>"; };
+		ADE34C031AF4FB5E00232DCB /* AddBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBottleViewController.h; sourceTree = "<group>"; };
+		ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBottleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +103,21 @@
 				ADE34BDC1AF4E08D00232DCB /* AppDelegate.m */,
 				ADE34BDE1AF4E08D00232DCB /* ViewController.h */,
 				ADE34BDF1AF4E08D00232DCB /* ViewController.m */,
-				ADE34BE11AF4E08D00232DCB /* Main.storyboard */,
+				AD8BFD181B030EEA00D7D053 /* Main.storyboard */,
+				ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */,
+				ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */,
+				ADE34BFD1AF4E3D600232DCB /* MainViewController.h */,
+				ADE34BFE1AF4E3D600232DCB /* MainViewController.m */,
+				ADE34C001AF4F8CD00232DCB /* AllBottleSearchViewController.h */,
+				ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */,
+				AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */,
+				AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */,
+				AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */,
+				AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */,
+				ADE34C031AF4FB5E00232DCB /* AddBottleViewController.h */,
+				ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */,
+				AD8BFD151B030D4800D7D053 /* LaunchScreen.xib */,
 				ADE34BE41AF4E08D00232DCB /* Images.xcassets */,
-				ADE34BE61AF4E08D00232DCB /* LaunchScreen.xib */,
 				ADE34BD71AF4E08D00232DCB /* Supporting Files */,
 			);
 			path = BottleDetection2;
@@ -199,9 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE34BE31AF4E08D00232DCB /* Main.storyboard in Resources */,
-				ADE34BE81AF4E08D00232DCB /* LaunchScreen.xib in Resources */,
+				AD8BFD191B030EEA00D7D053 /* Main.storyboard in Resources */,
 				ADE34BE51AF4E08D00232DCB /* Images.xcassets in Resources */,
+				AD8BFD161B030D4800D7D053 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA10C801B01F3A5009293E2 /* LoginViewController.m in Sources */,
+				ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */,
 				ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */,
 				ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */,
+				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
 				ADE34BDA1AF4E08D00232DCB /* main.m in Sources */,
+				ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */,
+				ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */,
+				AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +278,6 @@
 			targetProxy = ADE34BEE1AF4E08D00232DCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ADE34BE11AF4E08D00232DCB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADE34BE21AF4E08D00232DCB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ADE34BE61AF4E08D00232DCB /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADE34BE71AF4E08D00232DCB /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ADE34BF51AF4E08D00232DCB /* Debug */ = {
@@ -347,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +435,7 @@
 				ADE34BF91AF4E08D00232DCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADE34BFA1AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "BottleDetection2Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +444,7 @@
 				ADE34BFC1AF4E08D00232DCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
