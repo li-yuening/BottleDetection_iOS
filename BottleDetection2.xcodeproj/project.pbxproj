@@ -12,6 +12,7 @@
 		AD8BFD231B03EE0C00D7D053 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD1F1B03EE0C00D7D053 /* LaunchScreen.xib */; };
 		AD8BFD241B03EE0C00D7D053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD211B03EE0C00D7D053 /* Main.storyboard */; };
 		ADA10C801B01F3A5009293E2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */; };
+		ADA7C8B01B0B34510078B31A /* AllBottleCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */; };
 		ADE34BDA1AF4E08D00232DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BD91AF4E08D00232DCB /* main.m */; };
 		ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BDC1AF4E08D00232DCB /* AppDelegate.m */; };
 		ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BDF1AF4E08D00232DCB /* ViewController.m */; };
@@ -41,6 +42,8 @@
 		AD8BFD221B03EE0C00D7D053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		ADA7C8AE1B0B34510078B31A /* AllBottleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBottleCustomCell.h; sourceTree = "<group>"; };
+		ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBottleCustomCell.m; sourceTree = "<group>"; };
 		ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleDetection2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE34BD81AF4E08D00232DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE34BD91AF4E08D00232DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				ADE34BDE1AF4E08D00232DCB /* ViewController.h */,
 				ADE34BDF1AF4E08D00232DCB /* ViewController.m */,
 				AD8BFD211B03EE0C00D7D053 /* Main.storyboard */,
+				ADA7C8AE1B0B34510078B31A /* AllBottleCustomCell.h */,
+				ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */,
 				ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */,
 				ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */,
 				ADE34BFD1AF4E3D600232DCB /* MainViewController.h */,
@@ -253,6 +258,7 @@
 				ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */,
 				ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */,
 				ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */,
+				ADA7C8B01B0B34510078B31A /* AllBottleCustomCell.m in Sources */,
 				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
 				ADE34BDA1AF4E08D00232DCB /* main.m in Sources */,
 				ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */,
