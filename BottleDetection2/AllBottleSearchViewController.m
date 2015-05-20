@@ -7,6 +7,8 @@
 //
 
 #import "AllBottleSearchViewController.h"
+#import "AllBottleCustomCell.h"
+#import "NSString+URLEncoding.h"
 
 @interface AllBottleSearchViewController ()
 
@@ -22,7 +24,51 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self startRequest];
+    
+    //register notification, trigger method reloadView()
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(reloadView:)
+//                                                 name:@"reloadViewNotification"
+//                                               object:nil];
+    
+    //get local json object
+//    NSString* path = [[NSBundle mainBundle] pathForResource:@"Notes" ofType:@"json"];
+//    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
+//    
+//    NSError *error;
+//    
+//    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
+//                                                 options:NSJSONReadingMutableContainers error:&error];
+//
+//    self.listData = jsonObj;
 }
+
+- (void)startRequest {
+    //http://192.168.1.109:8080/BottleDetection2/servlet/AllBottle?page=1
+    //file:///Volumes/DATA/AllBottle.html
+    NSString *strURL = [[NSString alloc] initWithFormat:@"http://192.168.1.109:8080/BottleDetection2/servlet/AllBottle?page=1"];
+    
+    NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
+    
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    
+    //send request and get response json from servlet
+    NSData *data  = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSLog(@"请求完成...");
+    //serialize json to Dict
+    self.listData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    [self.tableView reloadData];
+    //[self reloadView:resDict];
+}
+
+//don't know how it works
+//-(void)reloadView:(NSDictionary *)res
+//{
+//    self.listData = [res objectForKey:@"weatherinfo"];
+//    [self.tableView reloadData];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -31,27 +77,37 @@
 
 #pragma mark - Table view data source
 
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
-}*/
+    return self.listData.count;
+}
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    AllBottleCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AllBottle" forIndexPath:indexPath];
     
     // Configure the cell...
+    //NSUInteger row = [indexPath row];
+    NSMutableDictionary*  dict = self.listData[indexPath.row];
+    cell.bottleNumberLabel.text = [dict objectForKey:@"BottleNumber"];
+    cell.carNumberLabel.text = [dict objectForKey:@"CarNumber"];
+    NSUInteger bt = [[dict objectForKey:@"BottleType"] intValue];
+    if (bt==0) {
+        cell.bottleTypeLabel.text = @"缠绕瓶";
+    }
+    else if (bt==1) {
+        cell.bottleTypeLabel.text = @"钢瓶";
+    }
     
+    cell.bottleMadeCompanyLabel.text = [dict objectForKey:@"BottleMadeCompany"];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -96,5 +152,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 88.0f;
+//}
 
 @end

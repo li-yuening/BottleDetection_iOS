@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AllBottleSearchViewController : UITableViewController
-
+@property (nonatomic,strong) NSMutableArray* listData;
+//-(void)reloadView:(NSDictionary *)res;
+-(void)startRequest;
 @end
