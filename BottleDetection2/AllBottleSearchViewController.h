@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllBottleSearchViewController : UITableViewController
+@interface AllBottleSearchViewController : UITableViewController <NSURLConnectionDelegate>
 @property (nonatomic,strong) NSMutableArray* listData;
+@property (nonatomic,strong) NSMutableData *datas;
 //-(void)reloadView:(NSDictionary *)res;
 -(void)startRequest;
 @end
