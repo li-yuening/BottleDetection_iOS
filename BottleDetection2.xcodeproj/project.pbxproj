@@ -21,6 +21,8 @@
 		ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BFE1AF4E3D600232DCB /* MainViewController.m */; };
 		ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */; };
 		ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */; };
+		ADE9AEDD1B0B638F00135EAF /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = ADE9AEDC1B0B638F00135EAF /* Notes.json */; };
+		ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9AEE11B0B767A00135EAF /* NSString+URLEncoding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBottleSearchViewController.m; sourceTree = "<group>"; };
 		ADE34C031AF4FB5E00232DCB /* AddBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBottleViewController.h; sourceTree = "<group>"; };
 		ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBottleViewController.m; sourceTree = "<group>"; };
+		ADE9AEDC1B0B638F00135EAF /* Notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Notes.json; sourceTree = "<group>"; };
+		ADE9AEE01B0B767A00135EAF /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		ADE9AEE11B0B767A00135EAF /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 		ADE34BCB1AF4E08D00232DCB = {
 			isa = PBXGroup;
 			children = (
+				ADE9AEDC1B0B638F00135EAF /* Notes.json */,
 				ADE34BD61AF4E08D00232DCB /* BottleDetection2 */,
 				ADE34BF01AF4E08D00232DCB /* BottleDetection2Tests */,
 				ADE34BD51AF4E08D00232DCB /* Products */,
@@ -102,19 +108,21 @@
 		ADE34BD61AF4E08D00232DCB /* BottleDetection2 */ = {
 			isa = PBXGroup;
 			children = (
+				ADE9AEE01B0B767A00135EAF /* NSString+URLEncoding.h */,
+				ADE9AEE11B0B767A00135EAF /* NSString+URLEncoding.m */,
 				ADE34BDB1AF4E08D00232DCB /* AppDelegate.h */,
 				ADE34BDC1AF4E08D00232DCB /* AppDelegate.m */,
 				ADE34BDE1AF4E08D00232DCB /* ViewController.h */,
 				ADE34BDF1AF4E08D00232DCB /* ViewController.m */,
 				AD8BFD211B03EE0C00D7D053 /* Main.storyboard */,
-				ADA7C8AE1B0B34510078B31A /* AllBottleCustomCell.h */,
-				ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */,
 				ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */,
 				ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */,
 				ADE34BFD1AF4E3D600232DCB /* MainViewController.h */,
 				ADE34BFE1AF4E3D600232DCB /* MainViewController.m */,
 				ADE34C001AF4F8CD00232DCB /* AllBottleSearchViewController.h */,
 				ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */,
+				ADA7C8AE1B0B34510078B31A /* AllBottleCustomCell.h */,
+				ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */,
 				AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */,
 				AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */,
 				AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */,
@@ -237,6 +245,7 @@
 				AD8BFD231B03EE0C00D7D053 /* LaunchScreen.xib in Resources */,
 				AD8BFD241B03EE0C00D7D053 /* Main.storyboard in Resources */,
 				ADE34BE51AF4E08D00232DCB /* Images.xcassets in Resources */,
+				ADE9AEDD1B0B638F00135EAF /* Notes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */,
 				ADA7C8B01B0B34510078B31A /* AllBottleCustomCell.m in Sources */,
 				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
+				ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */,
 				ADE34BDA1AF4E08D00232DCB /* main.m in Sources */,
 				ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */,
 				ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */,

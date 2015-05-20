@@ -11,5 +11,7 @@
 @interface AllBottleCustomCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *bottleNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottleTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottleMadeCompanyLabel;
 
 @end
