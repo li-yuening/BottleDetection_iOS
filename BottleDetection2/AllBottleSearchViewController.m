@@ -48,7 +48,7 @@
 - (void)startRequest {
     //http://192.168.1.109:8080/BottleDetection2/servlet/AllBottle?page=1
     //file:///Volumes/DATA/AllBottle.html
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/AllBottle.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"http://192.168.1.109:8080/BottleDetection2/servlet/AllBottle?page=1"];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD59EBFC1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */; };
 		AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */; };
+		AD8089D71B0F34A9001BE3D3 /* GlobalDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8089D61B0F34A9001BE3D3 /* GlobalDetectViewController.m */; };
 		AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */; };
 		AD8BFD231B03EE0C00D7D053 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD1F1B03EE0C00D7D053 /* LaunchScreen.xib */; };
 		AD8BFD241B03EE0C00D7D053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD211B03EE0C00D7D053 /* Main.storyboard */; };
@@ -36,8 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD59EBFA1B0F0DF5000560D4 /* ExcuteChubuPanduanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExcuteChubuPanduanController.h; sourceTree = "<group>"; };
+		AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExcuteChubuPanduanController.m; sourceTree = "<group>"; };
 		AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveBottleViewController.h; sourceTree = "<group>"; };
 		AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveBottleViewController.m; sourceTree = "<group>"; };
+		AD8089D51B0F34A9001BE3D3 /* GlobalDetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDetectViewController.h; sourceTree = "<group>"; };
+		AD8089D61B0F34A9001BE3D3 /* GlobalDetectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDetectViewController.m; sourceTree = "<group>"; };
 		AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AD8BFD201B03EE0C00D7D053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -115,6 +121,12 @@
 				ADE34BDE1AF4E08D00232DCB /* ViewController.h */,
 				ADE34BDF1AF4E08D00232DCB /* ViewController.m */,
 				AD8BFD211B03EE0C00D7D053 /* Main.storyboard */,
+				AD8089D51B0F34A9001BE3D3 /* GlobalDetectViewController.h */,
+				AD8089D61B0F34A9001BE3D3 /* GlobalDetectViewController.m */,
+				AD59EBFA1B0F0DF5000560D4 /* ExcuteChubuPanduanController.h */,
+				AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */,
+				AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */,
+				AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */,
 				ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */,
 				ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */,
 				ADE34BFD1AF4E3D600232DCB /* MainViewController.h */,
@@ -125,8 +137,6 @@
 				ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */,
 				AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */,
 				AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */,
-				AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */,
-				AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */,
 				ADE34C031AF4FB5E00232DCB /* AddBottleViewController.h */,
 				ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */,
 				ADE34BE41AF4E08D00232DCB /* Images.xcassets */,
@@ -264,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA10C801B01F3A5009293E2 /* LoginViewController.m in Sources */,
+				AD59EBFC1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m in Sources */,
 				ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */,
 				ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */,
 				ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */,
@@ -271,6 +282,7 @@
 				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
 				ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */,
 				ADE34BDA1AF4E08D00232DCB /* main.m in Sources */,
+				AD8089D71B0F34A9001BE3D3 /* GlobalDetectViewController.m in Sources */,
 				ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */,
 				ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */,
 				AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */,
