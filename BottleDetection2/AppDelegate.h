@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    NSString *ipAddress;
+}
+@property (nonatomic, retain) NSString  *ipAddress;
 @property (strong, nonatomic) UIWindow *window;
 
 

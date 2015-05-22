@@ -8,6 +8,7 @@
 
 #import "ExcuteChubuPanduanController.h"
 #import "NSString+URLEncoding.h"
+#import "AppDelegate.h"
 
 @interface ExcuteChubuPanduanController()
 
@@ -30,7 +31,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSUInteger section = [indexPath section];
     NSInteger row = [indexPath row];
-    NSLog(@"%ld",(long)row);
+    //NSLog(@"%ld",(long)row);
     if ((row == 0)&&(section == 1)) {
         self.cpTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
         self.cpFalseCell.accessoryType = UITableViewCellAccessoryNone;
@@ -46,8 +47,9 @@
 }
 
 - (void)startSaveCPRequest{
-    //file:///Volumes/DATA/servlet/ExcuteChubuPanduan.html
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ExcuteChubuPanduan.html"];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExcuteChubuPanduan"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
