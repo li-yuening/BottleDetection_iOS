@@ -13,10 +13,11 @@
 @end
 
 @implementation AppDelegate
-
+@synthesize ipAddress;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.ipAddress = @"http://192.168.1.109:8080/BottleDetection2/servlet/";
     return YES;
 }
 

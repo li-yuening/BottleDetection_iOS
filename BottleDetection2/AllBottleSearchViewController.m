@@ -9,6 +9,7 @@
 #import "AllBottleSearchViewController.h"
 #import "AllBottleCustomCell.h"
 #import "NSString+URLEncoding.h"
+#import "AppDelegate.h"
 
 @interface AllBottleSearchViewController ()
 
@@ -46,9 +47,9 @@
 }
 
 - (void)startRequest {
-    //http://192.168.1.109:8080/BottleDetection2/servlet/AllBottle?page=1
-    //file:///Volumes/DATA/AllBottle.html
-    NSString *strURL = [[NSString alloc] initWithFormat:@"http://192.168.1.109:8080/BottleDetection2/servlet/AllBottle?page=1"];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ChubuPanduan"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
