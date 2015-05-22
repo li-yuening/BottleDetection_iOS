@@ -7,6 +7,7 @@
 //
 
 #import "AddBottleViewController.h"
+//#import "ReceiveBottleViewController.h"
 
 @interface AddBottleViewController ()
 
@@ -97,4 +98,34 @@
 }
 */
 
+- (IBAction)saveAddBottle:(id)sender {
+    if ([self checkInput]==YES) {
+        //[self sendAddBottelRequst];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"有必填项未填写！" message:@"请完成输入" delegate:nil cancelButtonTitle:@"马上去写" otherButtonTitles: nil];
+        [alertView show];
+    }
+}
+
+- (Boolean)checkInput {
+    Boolean result = YES;
+    if (([self.bottleNumberLabel.text isEqualToString:@""])||([self.carNumberLabel.text isEqualToString:@""])||([self.bottleMadeCompanyLabel.text isEqualToString:@""])||([self.bottleNominalPressureLabel.text isEqualToString:@""])||([self.bottleWaterTestPressureLabel.text isEqualToString:@""])||([self.bottleDesignThicknessLabel.text isEqualToString:@""])||([self.bottleActualWeightLabel.text isEqualToString:@""])||([self.bottleActualVolumeLabel.text isEqualToString:@""])||([self.bottleMadeDateLabel.text isEqualToString:@""])||([self.bottleFirstInstallDateLabel.text isEqualToString:@""])) {
+        result = NO;
+    }
+    return result;
+}
+
+//to be implemented
+- (IBAction)keyboardHide:(id)sender {
+    
+    //operatorPwd get focused
+    if (sender==self.bottleNumberLabel) {
+        [self.carNumberLabel becomeFirstResponder];
+    }
+    else if (sender==self.carNumberLabel) {
+        [self.bottleMadeCountryLabel becomeFirstResponder];
+    }
+}
 @end

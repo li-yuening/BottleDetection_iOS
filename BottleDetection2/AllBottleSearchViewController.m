@@ -54,21 +54,45 @@
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
+    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    if (connection) {
+        _datas = [NSMutableData new];
+    }
+    
+    
     //send request and get response json from servlet
-    NSData *data  = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    /*NSData *data  = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSLog(@"请求完成...");
-    //serialize json to Dict
+    
+    //data to json, then serialize json to Array
     self.listData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     [self.tableView reloadData];
-    //[self reloadView:resDict];
+    //[self reloadView:resDict];*/
+}
+
+#pragma mark- NSURLConnection 回调方法
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [_datas appendData:data];
+}
+
+
+-(void) connection:(NSURLConnection *)connection didFailWithError: (NSError *)error {
+    
+    NSLog(@"%@",[error localizedDescription]);
+}
+
+- (void) connectionDidFinishLoading: (NSURLConnection*) connection {
+    NSLog(@"请求完成...");
+    self.listData = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
+    [self.tableView reloadData];
 }
 
 //don't know how it works
-//-(void)reloadView:(NSDictionary *)res
-//{
-//    self.listData = [res objectForKey:@"weatherinfo"];
-//    [self.tableView reloadData];
-//}
+/*-(void)reloadView:(NSDictionary *)res
+{
+    self.listData = [res objectForKey:@"weatherinfo"];
+    [self.tableView reloadData];
+}*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
