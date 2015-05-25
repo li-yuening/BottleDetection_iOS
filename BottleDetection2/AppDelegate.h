@@ -10,8 +10,12 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     NSString *ipAddress;
+    NSString *operatorNumber;
+    NSString *operatorRights;
 }
-@property (nonatomic, retain) NSString  *ipAddress;
+@property (nonatomic, retain) NSString *ipAddress;
+@property (nonatomic, retain) NSString *operatorName;
+@property (nonatomic, retain) NSString *operatorRights;
 @property (strong, nonatomic) UIWindow *window;
 
 

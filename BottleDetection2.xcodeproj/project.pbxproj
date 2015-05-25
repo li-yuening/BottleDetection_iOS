@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		AD59EBFC1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */; };
 		AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */; };
-		AD8089D71B0F34A9001BE3D3 /* GlobalDetectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8089D61B0F34A9001BE3D3 /* GlobalDetectViewController.m */; };
+		AD7E991A1B11929600D7E488 /* NoneDestructiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E99191B11929600D7E488 /* NoneDestructiveViewController.m */; };
+		AD7E991D1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E991C1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m */; };
+		AD7E99201B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */; };
+		AD7E99231B11BB1400D7E488 /* GlobalDectionGPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */; };
+		AD7E99261B11D0FF00D7E488 /* GlobalDetectionCRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */; };
 		AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */; };
 		AD8BFD231B03EE0C00D7D053 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD1F1B03EE0C00D7D053 /* LaunchScreen.xib */; };
 		AD8BFD241B03EE0C00D7D053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD211B03EE0C00D7D053 /* Main.storyboard */; };
@@ -43,8 +47,16 @@
 		AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExcuteChubuPanduanController.m; sourceTree = "<group>"; };
 		AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveBottleViewController.h; sourceTree = "<group>"; };
 		AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveBottleViewController.m; sourceTree = "<group>"; };
-		AD8089D51B0F34A9001BE3D3 /* GlobalDetectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDetectViewController.h; sourceTree = "<group>"; };
-		AD8089D61B0F34A9001BE3D3 /* GlobalDetectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDetectViewController.m; sourceTree = "<group>"; };
+		AD7E99181B11929600D7E488 /* NoneDestructiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoneDestructiveViewController.h; sourceTree = "<group>"; };
+		AD7E99191B11929600D7E488 /* NoneDestructiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoneDestructiveViewController.m; sourceTree = "<group>"; };
+		AD7E991B1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteGlobalDetectionGPViewController.h; sourceTree = "<group>"; };
+		AD7E991C1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecuteGlobalDetectionGPViewController.m; sourceTree = "<group>"; };
+		AD7E991E1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteGlobalDetectionCRViewController.h; sourceTree = "<group>"; };
+		AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecuteGlobalDetectionCRViewController.m; sourceTree = "<group>"; };
+		AD7E99211B11BB1400D7E488 /* GlobalDectionGPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDectionGPViewController.h; sourceTree = "<group>"; };
+		AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDectionGPViewController.m; sourceTree = "<group>"; };
+		AD7E99241B11D0FF00D7E488 /* GlobalDetectionCRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDetectionCRViewController.h; sourceTree = "<group>"; };
+		AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDetectionCRViewController.m; sourceTree = "<group>"; };
 		AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AD8BFD201B03EE0C00D7D053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -117,6 +129,8 @@
 		ADE34BD61AF4E08D00232DCB /* BottleDetection2 */ = {
 			isa = PBXGroup;
 			children = (
+				AD7E99181B11929600D7E488 /* NoneDestructiveViewController.h */,
+				AD7E99191B11929600D7E488 /* NoneDestructiveViewController.m */,
 				ADE9AEE01B0B767A00135EAF /* NSString+URLEncoding.h */,
 				ADE9AEE11B0B767A00135EAF /* NSString+URLEncoding.m */,
 				ADE34BDB1AF4E08D00232DCB /* AppDelegate.h */,
@@ -124,10 +138,16 @@
 				ADE34BDE1AF4E08D00232DCB /* ViewController.h */,
 				ADE34BDF1AF4E08D00232DCB /* ViewController.m */,
 				AD8BFD211B03EE0C00D7D053 /* Main.storyboard */,
+				AD7E99241B11D0FF00D7E488 /* GlobalDetectionCRViewController.h */,
+				AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */,
+				AD7E99211B11BB1400D7E488 /* GlobalDectionGPViewController.h */,
+				AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */,
+				AD7E991E1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.h */,
+				AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */,
+				AD7E991B1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.h */,
+				AD7E991C1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m */,
 				AD8F22EC1B0FA2970067C653 /* ConfigurationViewController.h */,
 				AD8F22ED1B0FA2970067C653 /* ConfigurationViewController.m */,
-				AD8089D51B0F34A9001BE3D3 /* GlobalDetectViewController.h */,
-				AD8089D61B0F34A9001BE3D3 /* GlobalDetectViewController.m */,
 				AD59EBFA1B0F0DF5000560D4 /* ExcuteChubuPanduanController.h */,
 				AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */,
 				AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */,
@@ -281,14 +301,18 @@
 				ADA10C801B01F3A5009293E2 /* LoginViewController.m in Sources */,
 				AD59EBFC1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m in Sources */,
 				ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */,
+				AD7E99201B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m in Sources */,
 				AD8F22EE1B0FA2970067C653 /* ConfigurationViewController.m in Sources */,
+				AD7E99231B11BB1400D7E488 /* GlobalDectionGPViewController.m in Sources */,
 				ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */,
 				ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */,
 				ADA7C8B01B0B34510078B31A /* AllBottleCustomCell.m in Sources */,
 				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
 				ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */,
 				ADE34BDA1AF4E08D00232DCB /* main.m in Sources */,
-				AD8089D71B0F34A9001BE3D3 /* GlobalDetectViewController.m in Sources */,
+				AD7E991A1B11929600D7E488 /* NoneDestructiveViewController.m in Sources */,
+				AD7E99261B11D0FF00D7E488 /* GlobalDetectionCRViewController.m in Sources */,
+				AD7E991D1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m in Sources */,
 				ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */,
 				ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */,
 				AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */,

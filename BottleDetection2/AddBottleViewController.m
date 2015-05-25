@@ -104,7 +104,7 @@
         [self.navigationController popViewControllerAnimated:YES];
     }
     else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"有必填项未填写！" message:@"请完成输入" delegate:nil cancelButtonTitle:@"马上去写" otherButtonTitles: nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"有必填项未填写！" message:@"请完成输入" delegate:nil cancelButtonTitle:@"马上写" otherButtonTitles: nil];
         [alertView show];
     }
 }

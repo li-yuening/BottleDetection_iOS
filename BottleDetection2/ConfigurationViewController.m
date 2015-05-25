@@ -11,6 +11,11 @@
 
 @implementation ConfigurationViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.tableView.scrollEnabled = NO;
+    self.navigationController.toolbarHidden = YES;
+}
+
 - (IBAction)saveIPAddress:(id)sender {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSString *ipHead = @"http://";
@@ -18,5 +23,6 @@
     NSString *ipTail = @":8080/BottleDetection2/servlet/";
     appDelegate.ipAddress = [appDelegate.ipAddress stringByAppendingString:ipTail];
     NSLog(@"%@",appDelegate.ipAddress);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

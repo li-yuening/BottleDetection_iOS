@@ -22,9 +22,9 @@
     self.bottleNumberLabel.text = [self.sendParameters objectForKey:@"bottleNumber"];
     self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
     if ([[self.sendParameters objectForKey:@"bottleType"] intValue] == 0) {
-        self.bottleTypeLabel.text = @"缠绕瓶";
-    }else if ([[self.sendParameters objectForKey:@"bottleType"] intValue] == 1) {
         self.bottleTypeLabel.text = @"钢瓶";
+    }else if ([[self.sendParameters objectForKey:@"bottleType"] intValue] == 1) {
+        self.bottleTypeLabel.text = @"缠绕瓶";
     }
 }
 
@@ -42,14 +42,19 @@
 }
 
 - (IBAction)saveCP:(id)sender {
-    [self startSaveCPRequest];
+    if ((self.cpTrueCell.accessoryType == UITableViewCellAccessoryNone)&&(self.cpFalseCell.accessoryType == UITableViewCellAccessoryNone)) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未选择检测结果！" message:@"请选择" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+        [alertView show];
+    } else {
+        [self startSaveCPRequest];
     self.saveCPButton.enabled = NO;
+    }
 }
 
 - (void)startSaveCPRequest{
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExcuteChubuPanduan"]];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteChubuPanduan"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
@@ -63,26 +68,36 @@
         cpresult = 0;
     }
     
+    //can't put integer in dict, so convert it to string
     NSString *cpResultString = [NSString stringWithFormat:@"%lu",(unsigned long)cpresult];
     
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"bottleNumber",self.bottleNumberLabel.text,@"preDetectResult",cpResultString,nil];
-    
+    //data in dict
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleNumber"],@"bottleNumber",[self.sendParameters objectForKey:@"bottleType"],@"bottleType",[self.sendParameters objectForKey:@"carNumber"],@"carNumber",cpResultString,@"preDetectResult",nil];
     NSError *error;
+
+    //dict data to json NSData
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
                                                        options:0
                                                          error:&error];
-//    NSString *jsonString;
-//    if (! jsonData) {
-//        NSLog(@"Got an error: %@", error);
-//    } else {
-//        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//    }
-//    
-//    NSString *post = [NSString stringWithFormat:@"content=%@",jsonString];
     
+    //NSData to string
+    NSString *jsonString;
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    
+    //set http post parameter, which is content
+    NSString *post = [NSString stringWithFormat:@"content=%@",jsonString];
+    
+    //string to NSData
+    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //set http
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:jsonData];
+    [request setHTTPBody:postData];
     
     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     if (connection) {
