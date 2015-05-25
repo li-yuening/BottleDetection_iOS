@@ -19,38 +19,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+    self.isFirstLoad = self.isFirstLoad + 1;
+    self.pagePresent = 1;
+    self.navigationController.toolbarHidden = NO;
+    self.previousPageButton.enabled = false;
+    self.nextPageButton.enabled = false;
+    if (self.isFirstLoad == 1) {
+        [self startRequest];
+    }
+}
+
+- (IBAction)previousPage:(id)sender {
+    self.pagePresent = self.pagePresent - 1;
     [self startRequest];
-    
-    //register notification, trigger method reloadView()
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(reloadView:)
-//                                                 name:@"reloadViewNotification"
-//                                               object:nil];
-    
-    //get local json object
-//    NSString* path = [[NSBundle mainBundle] pathForResource:@"Notes" ofType:@"json"];
-//    NSData *jsonData = [[NSData alloc] initWithContentsOfFile:path];
-//    
-//    NSError *error;
-//    
-//    id jsonObj = [NSJSONSerialization JSONObjectWithData:jsonData
-//                                                 options:NSJSONReadingMutableContainers error:&error];
-//
-//    self.listData = jsonObj;
+}
+
+- (IBAction)nextPage:(id)sender {
+    self.pagePresent = self.pagePresent + 1;
+    [self startRequest];
 }
 
 - (void)startRequest {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ChubuPanduan"]];
-    
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/AllBottle.html"];
+    NSString *pageString = [[NSString alloc]initWithFormat:@"%@",[NSString stringWithFormat:@"%lu",(unsigned long)self.pagePresent]];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@%@",[appDelegate.ipAddress stringByAppendingString:@"AllBottle?page="],pageString];
+    NSLog(@"%@",strURL);
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -59,16 +53,6 @@
     if (connection) {
         _datas = [NSMutableData new];
     }
-    
-    
-    //send request and get response json from servlet
-    /*NSData *data  = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSLog(@"请求完成...");
-    
-    //data to json, then serialize json to Array
-    self.listData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    [self.tableView reloadData];
-    //[self reloadView:resDict];*/
 }
 
 #pragma mark- NSURLConnection 回调方法
@@ -83,8 +67,22 @@
 }
 
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-    NSLog(@"请求完成...");
-    self.listData = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
+    NSLog(@"返回所有气瓶完成");
+    self.previousPageButton.enabled = YES;
+    self.nextPageButton.enabled = YES;
+    self.listDataDict = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
+    self.listData = [self.listDataDict objectForKey:@"content"];
+    NSUInteger pageInTable = [[self.listDataDict objectForKey:@"pageInTable"] intValue];
+    if (self.pagePresent <= 1) {
+        self.previousPageButton.enabled = false;
+        self.nextPageButton.enabled = true;
+    }
+    if (self.pagePresent >= pageInTable) {
+        self.nextPageButton.enabled = false;
+        self.previousPageButton.enabled = true;
+    }
+    NSString *navigationTitle = [[NSString alloc]initWithFormat:@"%@ / %@",[NSString stringWithFormat:@"%lu",(unsigned long)self.pagePresent],[self.listDataDict objectForKey:@"pageInTable"]];
+    self.navigationItem.title = navigationTitle;
     [self.tableView reloadData];
 }
 
@@ -119,17 +117,17 @@
     // Configure the cell...
     //NSUInteger row = [indexPath row];
     NSMutableDictionary*  dict = self.listData[indexPath.row];
-    cell.bottleNumberLabel.text = [dict objectForKey:@"BottleNumber"];
-    cell.carNumberLabel.text = [dict objectForKey:@"CarNumber"];
-    NSUInteger bt = [[dict objectForKey:@"BottleType"] intValue];
+    cell.bottleNumberLabel.text = [dict objectForKey:@"bottleNumber"];
+    cell.carNumberLabel.text = [dict objectForKey:@"carNumber"];
+    NSUInteger bt = [[dict objectForKey:@"bottleType"] intValue];
     if (bt==0) {
-        cell.bottleTypeLabel.text = @"缠绕瓶";
-    }
-    else if (bt==1) {
         cell.bottleTypeLabel.text = @"钢瓶";
     }
+    else if (bt==1) {
+        cell.bottleTypeLabel.text = @"缠绕瓶";
+    }
     
-    cell.bottleMadeCompanyLabel.text = [dict objectForKey:@"BottleMadeCompany"];
+    cell.bottleMadeCompanyLabel.text = [dict objectForKey:@"bottleMadeCompany"];
     return cell;
 }
 

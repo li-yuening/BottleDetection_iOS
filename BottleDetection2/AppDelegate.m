@@ -14,6 +14,8 @@
 
 @implementation AppDelegate
 @synthesize ipAddress;
+@synthesize operatorName;
+@synthesize operatorRights;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

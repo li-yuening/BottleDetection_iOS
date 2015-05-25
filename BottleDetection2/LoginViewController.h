@@ -11,6 +11,10 @@
 @interface LoginViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UITextField *operatorNumber;
 @property (weak, nonatomic) IBOutlet UITextField *operatorPwd;
+@property (nonatomic,strong) NSMutableDictionary *listData;
+@property (nonatomic,strong) NSMutableData *datas;
 - (IBAction)logIn:(id)sender;
 - (IBAction)keyboardHide:(id)sender;
+- (void)startRequest;
+- (BOOL)nullCheck;
 @end

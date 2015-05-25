@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface AllBottleSearchViewController : UITableViewController <NSURLConnectionDelegate>
-@property (nonatomic,strong) NSMutableArray* listData;
+@property (nonatomic,strong) NSMutableArray *listData;
+@property (nonatomic,strong) NSMutableDictionary *listDataDict;
 @property (nonatomic,strong) NSMutableData *datas;
-//-(void)reloadView:(NSDictionary *)res;
+@property (readwrite,assign) NSUInteger pagePresent;
+@property (readwrite,assign) NSUInteger isFirstLoad;
+- (IBAction)previousPage:(id)sender;
+- (IBAction)nextPage:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousPageButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextPageButton;
 -(void)startRequest;
 @end

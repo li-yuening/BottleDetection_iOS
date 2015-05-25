@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "AppDelegate.h"
+#import "NSString+URLEncoding.h"
 
 @interface LoginViewController ()
 
@@ -22,7 +24,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationController.toolbarHidden = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tableView.scrollEnabled = NO;
     
+    self.operatorPwd.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +54,7 @@
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
     // Configure the cell...
     
@@ -99,11 +107,108 @@
 */
 
 - (IBAction)logIn:(id)sender {
-    if (([self.operatorNumber.text isEqual:@"000000"])&&([self.operatorPwd.text isEqual:@"admin"])) {
-        [self performSegueWithIdentifier:@"LogIn" sender:self];
+    if ([self nullCheck] == YES) {
+        [self startRequest];
     }
-    self.operatorPwd.text = @"";
 }
+
+- (BOOL)nullCheck {
+    BOOL result = true;
+    if ([self.operatorNumber.text isEqualToString:@""]) {
+        result = false;
+    }else if ([self.operatorPwd.text isEqualToString:@""]) {
+        result = false;
+    }
+    if (result == false) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败！" message:@"用户名或密码未填写" delegate:nil cancelButtonTitle:@"马上写" otherButtonTitles: nil];
+        [alertView show];
+    }
+    return result;
+}
+
+- (void)startRequest {
+    //post method
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/Login.html"];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"Login"]];
+    
+    NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
+    
+    //NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    
+    //data in dict
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setValue:self.operatorNumber.text forKey:@"operatorNumber"];
+    [dict setValue:self.operatorPwd.text forKey:@"operatorPwd"];
+    
+    NSError *error;
+    
+    //dict data to json NSData
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                       options:0
+                                                         error:&error];
+    
+    //NSData to string
+    NSString *jsonString;
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", error);
+    } else {
+        jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    
+    //set http post parameter, which is content
+    NSString *post = [NSString stringWithFormat:@"content=%@",jsonString];
+    
+    //string to NSData
+    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //set http
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:postData];
+    
+    
+    
+    
+    
+    
+    NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    if (connection) {
+        _datas = [NSMutableData new];
+    }
+}
+
+#pragma mark- NSURLConnection 回调方法
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [_datas appendData:data];
+}
+
+
+-(void) connection:(NSURLConnection *)connection didFailWithError: (NSError *)error {
+    
+    NSLog(@"%@",[error localizedDescription]);
+}
+
+- (void) connectionDidFinishLoading: (NSURLConnection*) connection {
+    NSLog(@"登录结果返回完成");
+    self.listData = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
+    
+    NSString *isLoginSuccess= [self.listData objectForKey:@"isLoginSuccess"];
+    if ([isLoginSuccess isEqualToString:@"true"]) {
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        
+        NSDictionary *operatorInfo = [self.listData objectForKey:@"OperatorInfo"];
+        appDelegate.operatorName = [operatorInfo objectForKey:@"operatorName"];
+        appDelegate.operatorRights = [operatorInfo objectForKey:@"operatorRights"];
+        
+        [self performSegueWithIdentifier:@"LogIn" sender:self];
+    } else if ([isLoginSuccess isEqualToString:@"false"]) {
+        self.operatorPwd.text = @"";
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登录失败！" message:@"用户名密码错误或用户不存在,请重新输入" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+        [alertView show];
+    }
+}
+
 
 - (IBAction)keyboardHide:(id)sender {
     

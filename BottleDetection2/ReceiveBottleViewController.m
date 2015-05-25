@@ -91,10 +91,10 @@
     cell.carNumberLabel.text = [dict objectForKey:@"carNumber"];
     NSUInteger bt = [[dict objectForKey:@"bottleType"] intValue];
     if (bt==0) {
-        cell.bottleTypeLabel.text = @"缠绕瓶";
+        cell.bottleTypeLabel.text = @"钢瓶";
     }
     else if (bt==1) {
-        cell.bottleTypeLabel.text = @"钢瓶";
+        cell.bottleTypeLabel.text = @"缠绕瓶";
     }
     
     cell.bottleMadeCompanyLabel.text = [dict objectForKey:@"bottleMadeCompany"];
