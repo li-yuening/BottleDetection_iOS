@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD59EBFC1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */; };
 		AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */; };
+		AD7A00831B209AEC0068530E /* WaterTestPressureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A00821B209AEC0068530E /* WaterTestPressureViewController.m */; };
 		AD7E991A1B11929600D7E488 /* NoneDestructiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E99191B11929600D7E488 /* NoneDestructiveViewController.m */; };
 		AD7E991D1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E991C1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m */; };
 		AD7E99201B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */; };
@@ -28,8 +28,11 @@
 		ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34BFE1AF4E3D600232DCB /* MainViewController.m */; };
 		ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */; };
 		ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */; };
+		ADE5217B1B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE5217A1B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.m */; };
 		ADE9AEDD1B0B638F00135EAF /* Notes.json in Resources */ = {isa = PBXBuildFile; fileRef = ADE9AEDC1B0B638F00135EAF /* Notes.json */; };
 		ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE9AEE11B0B767A00135EAF /* NSString+URLEncoding.m */; };
+		ADF33DE01B205D9100936497 /* GlobalDetectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF33DDF1B205D9100936497 /* GlobalDetectCell.m */; };
+		ADF33DE31B20611100936497 /* ExecuteChubuPanduanController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF33DE21B20611100936497 /* ExecuteChubuPanduanController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD59EBFA1B0F0DF5000560D4 /* ExcuteChubuPanduanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExcuteChubuPanduanController.h; sourceTree = "<group>"; };
-		AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExcuteChubuPanduanController.m; sourceTree = "<group>"; };
 		AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiveBottleViewController.h; sourceTree = "<group>"; };
 		AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiveBottleViewController.m; sourceTree = "<group>"; };
+		AD7A00811B209AEC0068530E /* WaterTestPressureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterTestPressureViewController.h; sourceTree = "<group>"; };
+		AD7A00821B209AEC0068530E /* WaterTestPressureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterTestPressureViewController.m; sourceTree = "<group>"; };
 		AD7E99181B11929600D7E488 /* NoneDestructiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoneDestructiveViewController.h; sourceTree = "<group>"; };
 		AD7E99191B11929600D7E488 /* NoneDestructiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoneDestructiveViewController.m; sourceTree = "<group>"; };
 		AD7E991B1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteGlobalDetectionGPViewController.h; sourceTree = "<group>"; };
@@ -84,9 +87,15 @@
 		ADE34C011AF4F8CD00232DCB /* AllBottleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBottleSearchViewController.m; sourceTree = "<group>"; };
 		ADE34C031AF4FB5E00232DCB /* AddBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBottleViewController.h; sourceTree = "<group>"; };
 		ADE34C041AF4FB5E00232DCB /* AddBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBottleViewController.m; sourceTree = "<group>"; };
+		ADE521791B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteWaterTestPressureViewController.h; sourceTree = "<group>"; };
+		ADE5217A1B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecuteWaterTestPressureViewController.m; sourceTree = "<group>"; };
 		ADE9AEDC1B0B638F00135EAF /* Notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Notes.json; sourceTree = "<group>"; };
 		ADE9AEE01B0B767A00135EAF /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
 		ADE9AEE11B0B767A00135EAF /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		ADF33DDE1B205D9100936497 /* GlobalDetectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDetectCell.h; sourceTree = "<group>"; };
+		ADF33DDF1B205D9100936497 /* GlobalDetectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDetectCell.m; sourceTree = "<group>"; };
+		ADF33DE11B20611100936497 /* ExecuteChubuPanduanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExecuteChubuPanduanController.h; sourceTree = "<group>"; };
+		ADF33DE21B20611100936497 /* ExecuteChubuPanduanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExecuteChubuPanduanController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,8 @@
 		ADE34BD61AF4E08D00232DCB /* BottleDetection2 */ = {
 			isa = PBXGroup;
 			children = (
+				ADF33DE11B20611100936497 /* ExecuteChubuPanduanController.h */,
+				ADF33DE21B20611100936497 /* ExecuteChubuPanduanController.m */,
 				AD7E99181B11929600D7E488 /* NoneDestructiveViewController.h */,
 				AD7E99191B11929600D7E488 /* NoneDestructiveViewController.m */,
 				ADE9AEE01B0B767A00135EAF /* NSString+URLEncoding.h */,
@@ -138,20 +149,24 @@
 				ADE34BDE1AF4E08D00232DCB /* ViewController.h */,
 				ADE34BDF1AF4E08D00232DCB /* ViewController.m */,
 				AD8BFD211B03EE0C00D7D053 /* Main.storyboard */,
-				AD7E99241B11D0FF00D7E488 /* GlobalDetectionCRViewController.h */,
-				AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */,
-				AD7E99211B11BB1400D7E488 /* GlobalDectionGPViewController.h */,
-				AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */,
-				AD7E991E1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.h */,
-				AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */,
-				AD7E991B1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.h */,
-				AD7E991C1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m */,
-				AD8F22EC1B0FA2970067C653 /* ConfigurationViewController.h */,
-				AD8F22ED1B0FA2970067C653 /* ConfigurationViewController.m */,
-				AD59EBFA1B0F0DF5000560D4 /* ExcuteChubuPanduanController.h */,
-				AD59EBFB1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m */,
+				AD7A00811B209AEC0068530E /* WaterTestPressureViewController.h */,
+				AD7A00821B209AEC0068530E /* WaterTestPressureViewController.m */,
+				ADE521791B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.h */,
+				ADE5217A1B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.m */,
+				ADF33DDE1B205D9100936497 /* GlobalDetectCell.h */,
+				ADF33DDF1B205D9100936497 /* GlobalDetectCell.m */,
 				AD6CF9651AF9EA3A00ABFE91 /* ReceiveBottleViewController.h */,
 				AD6CF9661AF9EA3A00ABFE91 /* ReceiveBottleViewController.m */,
+				AD7E99211B11BB1400D7E488 /* GlobalDectionGPViewController.h */,
+				AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */,
+				AD7E991B1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.h */,
+				AD7E991C1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m */,
+				AD7E99241B11D0FF00D7E488 /* GlobalDetectionCRViewController.h */,
+				AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */,
+				AD7E991E1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.h */,
+				AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */,
+				AD8F22EC1B0FA2970067C653 /* ConfigurationViewController.h */,
+				AD8F22ED1B0FA2970067C653 /* ConfigurationViewController.m */,
 				ADA10C7E1B01F3A5009293E2 /* LoginViewController.h */,
 				ADA10C7F1B01F3A5009293E2 /* LoginViewController.m */,
 				ADE34BFD1AF4E3D600232DCB /* MainViewController.h */,
@@ -299,14 +314,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA10C801B01F3A5009293E2 /* LoginViewController.m in Sources */,
-				AD59EBFC1B0F0DF5000560D4 /* ExcuteChubuPanduanController.m in Sources */,
 				ADE34C051AF4FB5E00232DCB /* AddBottleViewController.m in Sources */,
+				ADF33DE31B20611100936497 /* ExecuteChubuPanduanController.m in Sources */,
 				AD7E99201B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m in Sources */,
 				AD8F22EE1B0FA2970067C653 /* ConfigurationViewController.m in Sources */,
 				AD7E99231B11BB1400D7E488 /* GlobalDectionGPViewController.m in Sources */,
 				ADE34BE01AF4E08D00232DCB /* ViewController.m in Sources */,
 				ADE34BDD1AF4E08D00232DCB /* AppDelegate.m in Sources */,
+				ADE5217B1B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.m in Sources */,
 				ADA7C8B01B0B34510078B31A /* AllBottleCustomCell.m in Sources */,
+				ADF33DE01B205D9100936497 /* GlobalDetectCell.m in Sources */,
 				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
 				ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */,
 				ADE34BDA1AF4E08D00232DCB /* main.m in Sources */,
@@ -314,6 +331,7 @@
 				AD7E99261B11D0FF00D7E488 /* GlobalDetectionCRViewController.m in Sources */,
 				AD7E991D1B11974100D7E488 /* ExecuteGlobalDetectionGPViewController.m in Sources */,
 				ADE34C021AF4F8CD00232DCB /* AllBottleSearchViewController.m in Sources */,
+				AD7A00831B209AEC0068530E /* WaterTestPressureViewController.m in Sources */,
 				ADE34BFF1AF4E3D600232DCB /* MainViewController.m in Sources */,
 				AD6CF9671AF9EA3A00ABFE91 /* ReceiveBottleViewController.m in Sources */,
 			);

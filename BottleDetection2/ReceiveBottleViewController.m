@@ -9,7 +9,7 @@
 #import "ReceiveBottleViewController.h"
 #import "AllBottleCustomCell.h"
 #import "NSString+URLEncoding.h"
-#import "ExcuteChubuPanduanController.h"
+#import "ExecuteChubuPanduanController.h"
 #import "AppDelegate.h"
 
 @interface ReceiveBottleViewController ()
@@ -143,10 +143,10 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"excuteCPSegue"]) {
-        ExcuteChubuPanduanController *excuteChubuPanduanController = segue.destinationViewController;
+        ExecuteChubuPanduanController *executeChubuPanduanController = segue.destinationViewController;
         NSInteger row = [[self.tableView indexPathForSelectedRow] row];
         //NSLog(@"%ld",(long)row);
-        excuteChubuPanduanController.sendParameters = self.listData[row];
+        executeChubuPanduanController.sendParameters = self.listData[row];
     }
 }
 

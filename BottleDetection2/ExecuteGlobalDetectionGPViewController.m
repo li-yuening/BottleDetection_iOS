@@ -14,4 +14,12 @@
     self.navigationController.toolbarHidden = YES;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.bottleDetectNumberLabel.text = [self.sendParameters objectForKey:@"bottleDetectNumber"];
+    self.bottleNumberLabel.text = [self.sendParameters objectForKey:@"bottleNumber"];
+    self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
+}
+
+
 @end

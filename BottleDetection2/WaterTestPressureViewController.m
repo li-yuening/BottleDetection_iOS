@@ -1,22 +1,18 @@
 //
-//  GlobalDectionGPViewController.m
+//  WaterTestPressureViewController.m
 //  BottleDetection2
 //
-//  Created by Li Yuening on 15/5/24.
+//  Created by Li Yuening on 15/6/4.
 //  Copyright (c) 2015年 Li Yuening. All rights reserved.
 //
 
-#import "GlobalDectionGPViewController.h"
-#import "GlobalDetectCell.h"
+#import "WaterTestPressureViewController.h"
 #import "AppDelegate.h"
 #import "NSString+URLEncoding.h"
-#import "ExecuteGlobalDetectionGPViewController.h"
+#import "GlobalDetectCell.h"
+#import "ExecuteWaterTestPressureViewController.h"
 
-@implementation GlobalDectionGPViewController
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.navigationController.toolbarHidden = NO;
-}
+@implementation WaterTestPressureViewController
 
 - (void)viewDidAppear:(BOOL)animated{
     [self startRequest];
@@ -25,7 +21,7 @@
 - (void)startRequest {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/GlobalDetect.html"];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"GlobalDetect?bottleType=0"]];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"WaterTestPressure"]];
     //NSLog(@"%@",strURL);
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
@@ -49,7 +45,7 @@
 }
 
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-    NSLog(@"宏观检查（钢瓶）界面加载完成");
+    NSLog(@"水压试验界面加载完成");
     self.listData = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
     [self.tableView reloadData];
 }
@@ -73,7 +69,7 @@
     cell.bottleDetectNumberLabel.text = [dict objectForKey:@"bottleDetectNumber"];
     cell.bottleNumberLabel.text = [dict objectForKey:@"bottleNumber"];
     cell.carNumberLabel.text = [dict objectForKey:@"carNumber"];
-        
+    
     //cell.bottleMadeCompanyLabel.text = [dict objectForKey:@"bottleMadeCompany"];
     return cell;
 }
@@ -84,13 +80,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"executeGlobalDetectGPSegue"]) {
-        ExecuteGlobalDetectionGPViewController *executeGlobalDetectionGPViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"executeWaterTestPressureSegue"]) {
+        ExecuteWaterTestPressureViewController *executeWaterTestPressureViewController = segue.destinationViewController;
         NSInteger row = [[self.tableView indexPathForSelectedRow] row];
         //NSLog(@"%ld",(long)row);
-        executeGlobalDetectionGPViewController.sendParameters = self.listData[row];
+        executeWaterTestPressureViewController.sendParameters = self.listData[row];
     }
 }
-
 
 @end

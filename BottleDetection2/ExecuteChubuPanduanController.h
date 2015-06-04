@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExcuteChubuPanduanController : UITableViewController
+@interface ExecuteChubuPanduanController : UITableViewController
 @property (weak, nonatomic) IBOutlet UITableViewCell *cpTrueCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *cpFalseCell;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveCPButton;
