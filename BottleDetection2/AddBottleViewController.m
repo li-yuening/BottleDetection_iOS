@@ -113,7 +113,7 @@
 
 - (Boolean)checkInput {
     Boolean result = YES;
-    if (([self.bottleNumberLabel.text isEqualToString:@""])||([self.carNumberLabel.text isEqualToString:@""])||([self.bottleMadeCompanyLabel.text isEqualToString:@""])||([self.bottleNominalPressureLabel.text isEqualToString:@""])||([self.bottleWaterTestPressureLabel.text isEqualToString:@""])||([self.bottleDesignThicknessLabel.text isEqualToString:@""])||([self.bottleActualWeightLabel.text isEqualToString:@""])||([self.bottleActualVolumeLabel.text isEqualToString:@""])||([self.bottleMadeDateLabel.text isEqualToString:@""])||([self.bottleFirstInstallDateLabel.text isEqualToString:@""])) {
+    if (([self.bottleNumberLabel.text isEqualToString:@""])||([self.carNumberLabel.text isEqualToString:@""])||([self.bottleMadeCompanyLabel.text isEqualToString:@""])||([self.bottleNominalPressureLabel.text isEqualToString:@""])||([self.bottleWaterTestPressureLabel.text isEqualToString:@""])||([self.bottleDesignThicknessLabel.text isEqualToString:@""])||([self.bottleActualWeightLabel.text isEqualToString:@""])||([self.bottleActualVolumeLabel.text isEqualToString:@""])||([self.bottleMadeDateLabel.text isEqualToString:@""])||([self.bottleFirstInstallDateLabel.text isEqualToString:@""])||([self.carBelongedCompanyLabel.text isEqualToString:@""])) {
         result = NO;
     }
     return result;
@@ -160,6 +160,9 @@
     [dict setValue:self.bottleMadeDateLabel.text forKey:@"bottleMadeDate"];
     [dict setValue:self.bottleFirstInstallDateLabel.text forKey:@"bottleFirstInstallDate"];
     [dict setValue:self.bottleLastCheckDateLabel.text forKey:@"bottleLastCheckDate"];
+    if ([self.bottleNextCheckDateLabel.text isEqualToString:@""]) {
+        self.bottleNextCheckDateLabel.text = @"------";
+    }
     [dict setValue:self.bottleNextCheckDateLabel.text forKey:@"bottleNextCheckDate"];
     [dict setValue:self.bottleServiceYearsLabel.text forKey:@"bottleServiceYears"];
     [dict setValue:self.bottleBelongedLabel.text forKey:@"bottleBelonged"];
@@ -224,7 +227,16 @@
 }
 
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-   [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"添加气瓶结果返回完成");
+    self.listData = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
+    
+    NSString *isAddBottleSuccess= [self.listData objectForKey:@"isOperationSuccess"];
+    if ([isAddBottleSuccess isEqualToString:@"true"]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else if ([isAddBottleSuccess isEqualToString:@"false"]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"添加失败！" message:@"后台添加气瓶功能异常,请联系管理员" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+        [alertView show];
+    }
 }
 
 - (int)checkBottleType {
