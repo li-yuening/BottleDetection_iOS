@@ -53,8 +53,8 @@
 
 - (void)startSaveCPRequest{
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ExecuteChubuPanduan.html"];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteChubuPanduan"]];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ExecuteChubuPanduan.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteChubuPanduan"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     

@@ -12,6 +12,7 @@
 //@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UITextField *bottleNumberLabel;
 @property (weak, nonatomic) IBOutlet UITextField *carNumberLabel;
+@property (weak, nonatomic) IBOutlet UITextField *rfidNumberLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *bottleTypeSegment;
 @property (weak, nonatomic) IBOutlet UITextField *bottleMadeCountryLabel;
 @property (weak, nonatomic) IBOutlet UITextField *bottleMadeCompanyLabel;
@@ -33,6 +34,19 @@
 @property (weak, nonatomic) IBOutlet UITextField *bottleGuideLabel;
 @property (weak, nonatomic) IBOutlet UITextField *bottleInstallLabel;
 - (IBAction)saveAddBottle:(id)sender;
-- (Boolean) checkInput;
+@property (weak, nonatomic) IBOutlet UITextField *carTypeLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carBelongedNameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carMadeFactoryLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carBelongedTelLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carBelongedCompanyAddressLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carBelongedCompanyLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveBottleButton;
+- (Boolean)checkInput;
+- (void)sendAddBottleRequest;
+- (int)checkBottleType;
+- (int)checkCarType;
+- (NSString *)toStringBottleType;
 - (IBAction)keyboardHide:(id)sender;
+@property (nonatomic,strong) NSMutableDictionary *listData;
+@property (nonatomic,strong) NSMutableData *datas;
 @end
