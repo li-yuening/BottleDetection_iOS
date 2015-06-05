@@ -128,9 +128,9 @@
 
 - (void)startRequest {
     //post method
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/Login.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/Login.html"];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"Login"]];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"Login"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     

@@ -53,8 +53,8 @@
 
 - (void)startSaveCPRequest{
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteChubuPanduan"]];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ExecuteChubuPanduan.html"];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteChubuPanduan"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
@@ -72,7 +72,7 @@
     NSString *cpResultString = [NSString stringWithFormat:@"%lu",(unsigned long)cpresult];
     
     //data in dict
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleNumber"],@"bottleNumber",[self.sendParameters objectForKey:@"bottleType"],@"bottleType",[self.sendParameters objectForKey:@"carNumber"],@"carNumber",cpResultString,@"preDetectResult",nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleNumber"],@"bottleNumber",[self.sendParameters objectForKey:@"bottleType"],@"bottleType",[self.sendParameters objectForKey:@"carNumber"],@"carNumber",cpResultString,@"preDetectResult",appDelegate.operatorName,@"operatorName",nil];
     NSError *error;
 
     //dict data to json NSData
