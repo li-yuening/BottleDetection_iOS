@@ -20,8 +20,8 @@
 
 - (void)startRequest {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"WhorlChange"]];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/WaterTestPressure.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"BottleValveChange"]];
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -62,7 +62,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GlobalDetectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WhorlChangeCell" forIndexPath:indexPath];
+    GlobalDetectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BottleValveChangeCell" forIndexPath:indexPath];
     
     NSMutableDictionary*  dict = self.listData[indexPath.row];
     cell.bottleDetectNumberLabel.text = [dict objectForKey:@"bottleDetectNumber"];
@@ -78,11 +78,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"executeWhorlChangeSegue"]) {
-        ExecuteWhorlChangeViewController *executeWhorlChangeViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"executeBottleValveChangeSegue"]) {
+        ExecuteWhorlChangeViewController *executeBottleValveChangeViewController = segue.destinationViewController;
         NSInteger row = [[self.tableView indexPathForSelectedRow] row];
         //NSLog(@"%ld",(long)row);
-        executeWhorlChangeViewController.sendParameters = self.listData[row];
+        executeBottleValveChangeViewController.sendParameters = self.listData[row];
     }
 }
 

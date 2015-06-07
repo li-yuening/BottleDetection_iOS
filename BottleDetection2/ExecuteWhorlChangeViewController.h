@@ -15,5 +15,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
 
 @property (nonatomic,strong) NSDictionary *sendParameters;
+@property (weak, nonatomic) IBOutlet UITextField *valveNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *testPressureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *testMediumLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveBVCButton;
+- (IBAction)saveBVCResult:(id)sender;
+@property (nonatomic,strong) NSMutableData *datas;
+@property (nonatomic,strong) NSString *bottleValveType;
+@property (nonatomic,strong) NSString *bottleValveChangeResult;
 
 @end

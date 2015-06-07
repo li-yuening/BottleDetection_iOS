@@ -1991,7 +1991,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="WhorlChangeCell" rowHeight="72" id="Gp2-2M-Mu3" customClass="GlobalDetectCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BottleValveChangeCell" rowHeight="72" id="Gp2-2M-Mu3" customClass="GlobalDetectCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gp2-2M-Mu3" id="yqg-WJ-hW6">
@@ -2043,10 +2043,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bottleDetectNumberLabel" destination="9H0-M7-FnN" id="6kP-XU-kK1"/>
-                                    <outlet property="bottleNumberLabel" destination="CC6-Re-S0P" id="w5m-YC-fes"/>
-                                    <outlet property="carNumberLabel" destination="S6P-6y-Vq2" id="gAo-wX-MNk"/>
-                                    <segue destination="fAI-fW-Qh5" kind="push" identifier="executeWhorlChangeSegue" id="p0f-od-3vi"/>
+                                    <outlet property="bottleDetectNumberLabel" destination="9H0-M7-FnN" id="nNf-Kh-856"/>
+                                    <outlet property="bottleNumberLabel" destination="CC6-Re-S0P" id="PQv-tf-by8"/>
+                                    <outlet property="carNumberLabel" destination="S6P-6y-Vq2" id="qYy-Fz-2bZ"/>
+                                    <segue destination="fAI-fW-Qh5" kind="push" identifier="executeBottleValveChangeSegue" id="p0f-od-3vi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2071,7 +2071,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AirProofTestCell" rowHeight="72" id="w6k-dN-xxx" customClass="GlobalDetectCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w6k-dN-xxx" id="4Dg-gV-MzA">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="71"/>
@@ -2156,7 +2156,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="VacuumCell" rowHeight="72" id="nQN-cl-EIb" customClass="GlobalDetectCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nQN-cl-EIb" id="ei2-Ye-DTs">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="71"/>
@@ -3722,12 +3722,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="瓶阀更换" id="Aao-xH-0fO">
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="JiK-ZX-bcE"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="JiK-ZX-bcE">
+                            <connections>
+                                <action selector="saveBVCResult:" destination="fAI-fW-Qh5" id="K7r-yp-5p3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bottleDetectNumberLabel" destination="05W-16-4A9" id="TXb-9c-YbM"/>
                         <outlet property="bottleNumberLabel" destination="wil-4p-qh2" id="Bmg-p3-vKG"/>
                         <outlet property="carNumberLabel" destination="nMf-fE-IKF" id="6yD-WX-d4F"/>
+                        <outlet property="saveBVCButton" destination="JiK-ZX-bcE" id="HnA-HZ-DMd"/>
+                        <outlet property="testMediumLabel" destination="g6D-kr-3iO" id="2So-6h-0pP"/>
+                        <outlet property="testPressureLabel" destination="4XX-iB-ttQ" id="18a-Ac-OT1"/>
+                        <outlet property="valveNumberLabel" destination="YGH-On-z1X" id="4B1-RH-6X1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzi-NQ-icQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3795,7 +3803,7 @@
                             <tableViewSection id="0Sf-bD-No4">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zCT-rx-Who">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zCT-rx-Who" id="DGD-gV-UXP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -3803,7 +3811,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L8M-rH-uAI">
-                                        <rect key="frame" x="0.0" y="79" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8M-rH-uAI" id="3TH-va-nkr">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -3811,7 +3819,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bva-BJ-N7l">
-                                        <rect key="frame" x="0.0" y="123" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bva-BJ-N7l" id="STj-hG-dxm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
