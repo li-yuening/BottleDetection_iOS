@@ -32,12 +32,6 @@
     
     if (self.noneDestructiveResultSegment.selectedSegmentIndex == 0) {
         noneDestructiveResult = 1;
-        self.noneDestructivePosition.text = NULL;
-        self.flawNumber.text = NULL;
-        self.flawType.text = NULL;
-        self.flawSize.text = NULL;
-        self.finalRating.text = NULL;
-        self.detail.text = NULL;
     }else if (self.noneDestructiveResultSegment.selectedSegmentIndex == 1) {
         noneDestructiveResult = 0;
     }
@@ -98,7 +92,7 @@
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
     NSLog(@"操作结果返回完成");
     //to do
-    [self popoverPresentationController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)saveNDResult:(id)sender {

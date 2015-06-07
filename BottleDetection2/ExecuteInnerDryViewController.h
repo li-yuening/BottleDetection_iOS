@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ExecuteInnerDryViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UILabel *bottleDetectNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bottleNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *innerDryCell;
+@property (nonatomic,strong) NSMutableData *datas;
+@property (nonatomic,strong) NSDictionary *sendParameters;
+- (IBAction)saveInnerDry:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveIDButton;
 
 @end

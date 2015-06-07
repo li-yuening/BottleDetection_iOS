@@ -16,6 +16,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.toolbarHidden = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
     [self startRequest];
 }
 

@@ -108,9 +108,9 @@
 }
 
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-    NSLog(@"气瓶流水号返回完成");
+    NSLog(@"操作结果返回完成");
     //to do
-    [self popoverPresentationController];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
