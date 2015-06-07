@@ -45,7 +45,7 @@
 - (void)startSaveWaterRequest{
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteWaterTestPressure"]];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ExecuteWaterTest"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
@@ -63,7 +63,7 @@
     NSString *waterResultString = [NSString stringWithFormat:@"%lu",(unsigned long)waterResult];
     
     //data in dict
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleDetectNumber"],@"bottleDetectNumber",waterResultString,@"waterResult",appDelegate.operatorName,@"operatorName",nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleDetectNumber"],@"bottleDetectNumber",appDelegate.operatorName,@"operatorName",waterResultString,@"waterTestResult",nil];
     NSError *error;
     
     //dict data to json NSData
@@ -109,6 +109,7 @@
 
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
     NSLog(@"气瓶流水号返回完成");
+    //to do
     [self popoverPresentationController];
 }
 

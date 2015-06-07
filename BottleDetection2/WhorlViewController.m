@@ -1,18 +1,18 @@
 //
-//  WaterTestPressureViewController.m
+//  WhorlViewController.m
 //  BottleDetection2
 //
-//  Created by Li Yuening on 15/6/4.
+//  Created by Li Yuening on 15/6/6.
 //  Copyright (c) 2015年 Li Yuening. All rights reserved.
 //
 
-#import "WaterTestPressureViewController.h"
+#import "WhorlViewController.h"
 #import "AppDelegate.h"
 #import "NSString+URLEncoding.h"
+#import "ExecuteWhorlChangeViewController.h"
 #import "GlobalDetectCell.h"
-#import "ExecuteWaterTestPressureViewController.h"
 
-@implementation WaterTestPressureViewController
+@implementation WhorlViewController
 
 - (void)viewDidAppear:(BOOL)animated{
     [self startRequest];
@@ -20,9 +20,8 @@
 
 - (void)startRequest {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/WaterTestPressure.html"];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"WaterTest"]];
-    //NSLog(@"%@",strURL);
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"WhorlChange"]];
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -45,7 +44,7 @@
 }
 
 - (void) connectionDidFinishLoading: (NSURLConnection*) connection {
-    NSLog(@"水压试验界面加载完成");
+    NSLog(@"瓶阀更换界面加载完成");
     self.listData = [NSJSONSerialization JSONObjectWithData:_datas options:NSJSONReadingAllowFragments error:nil];
     [self.tableView reloadData];
 }
@@ -63,14 +62,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GlobalDetectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WaterTestPressureCell" forIndexPath:indexPath];
+    GlobalDetectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WhorlChangeCell" forIndexPath:indexPath];
     
     NSMutableDictionary*  dict = self.listData[indexPath.row];
     cell.bottleDetectNumberLabel.text = [dict objectForKey:@"bottleDetectNumber"];
     cell.bottleNumberLabel.text = [dict objectForKey:@"bottleNumber"];
     cell.carNumberLabel.text = [dict objectForKey:@"carNumber"];
     
-    //cell.bottleMadeCompanyLabel.text = [dict objectForKey:@"bottleMadeCompany"];
     return cell;
 }
 
@@ -80,11 +78,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"executeWaterTestPressureSegue"]) {
-        ExecuteWaterTestPressureViewController *executeWaterTestPressureViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"executeWhorlChangeSegue"]) {
+        ExecuteWhorlChangeViewController *executeWhorlChangeViewController = segue.destinationViewController;
         NSInteger row = [[self.tableView indexPathForSelectedRow] row];
         //NSLog(@"%ld",(long)row);
-        executeWaterTestPressureViewController.sendParameters = self.listData[row];
+        executeWhorlChangeViewController.sendParameters = self.listData[row];
     }
 }
 
