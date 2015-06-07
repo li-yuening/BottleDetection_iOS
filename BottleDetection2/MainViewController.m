@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    self.navigationItem.title = @"当前用户：";
+    self.navigationItem.title = @"当前操作员：";
     self.navigationItem.title = [self.navigationItem.title stringByAppendingString:appDelegate.operatorName];
     // Uncomment the following line to preserve selection between presentations.
     //self.clearsSelectionOnViewWillAppear = NO;
