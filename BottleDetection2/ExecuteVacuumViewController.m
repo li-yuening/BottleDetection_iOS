@@ -23,7 +23,7 @@
     self.saveVacuumButton.enabled = NO;
     
     NSArray *testArray;
-    testArray = @[@[@"选择检验有效期",@"1",@"2",@"3",@"4",@"5"]];
+    testArray = @[@[@"选择检验有效期",@"1",@"2",@"3",@"4",@"5",@"6"]];
     
     MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:testArray selectedColor:[UIColor colorWithRed:10.0/255.0 green:96.0/255.0 blue:254.0/255.0 alpha:1.0]];
     menu.delegate = self;
@@ -69,6 +69,8 @@
         self.validTime = 4;
     }else if ((column == 0)&&(row == 5)) {
         self.validTime = 5;
+    }else if ((column == 0)&&(row == 6)) {
+        self.validTime = 6;
     }
     self.nextCheckDateLabel.text = [self makeDate:self.validTime];
 }
@@ -82,8 +84,14 @@
     NSString *yearString = [NSString stringWithFormat:@"%d",year+validTime];
     int month = [dateComponent month];
     NSString *monthString = [NSString stringWithFormat:@"%d",month];
+    if (month < 10) {
+        monthString = [@"0" stringByAppendingString:monthString];
+    }
     int day = [dateComponent day];
     NSString *dayString = [NSString stringWithFormat:@"%d",day];
+    if (day < 10) {
+        dayString = [@"0" stringByAppendingString:dayString];
+    }
     NSString *nextCheckDate = [NSString stringWithFormat:@"%@-%@-%@",yearString,monthString,dayString];
     return nextCheckDate;
 }

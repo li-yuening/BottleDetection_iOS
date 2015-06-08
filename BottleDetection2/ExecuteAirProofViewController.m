@@ -22,8 +22,7 @@
     self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
     
     NSArray *testArray;
-    testArray = @[@[@"选择试验方法",@"???"]];
-    
+    testArray = @[@[@"选择试验方法",@"浸水法"]];
     
     MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:testArray selectedColor:[UIColor colorWithRed:10.0/255.0 green:96.0/255.0 blue:254.0/255.0 alpha:1.0]];
     menu.delegate = self;

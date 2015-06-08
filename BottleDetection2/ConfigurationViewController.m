@@ -19,7 +19,11 @@
 - (IBAction)saveIPAddress:(id)sender {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     NSString *ipHead = @"http://";
-    appDelegate.ipAddress = [ipHead stringByAppendingString:self.ipAddressLabel.text];
+    if ([self.ipAddressLabel.text isEqualToString:@""]) {
+        appDelegate.ipAddress = [ipHead stringByAppendingString:@"192.168.1.109"];
+    } else {
+        appDelegate.ipAddress = [ipHead stringByAppendingString:self.ipAddressLabel.text];
+    }
     NSString *ipTail = @":8080/BottleDetection2/servlet/";
     appDelegate.ipAddress = [appDelegate.ipAddress stringByAppendingString:ipTail];
     NSLog(@"%@",appDelegate.ipAddress);

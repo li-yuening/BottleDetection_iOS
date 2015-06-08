@@ -21,6 +21,7 @@
 		AD7E99201B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E991F1B119FB100D7E488 /* ExecuteGlobalDetectionCRViewController.m */; };
 		AD7E99231B11BB1400D7E488 /* GlobalDectionGPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */; };
 		AD7E99261B11D0FF00D7E488 /* GlobalDetectionCRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */; };
+		AD82522D1B25D5A300B213E4 /* SetExaminerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD82522C1B25D5A300B213E4 /* SetExaminerCell.m */; };
 		AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */; };
 		AD8BFD231B03EE0C00D7D053 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD1F1B03EE0C00D7D053 /* LaunchScreen.xib */; };
 		AD8BFD241B03EE0C00D7D053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8BFD211B03EE0C00D7D053 /* Main.storyboard */; };
@@ -86,6 +87,8 @@
 		AD7E99221B11BB1400D7E488 /* GlobalDectionGPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDectionGPViewController.m; sourceTree = "<group>"; };
 		AD7E99241B11D0FF00D7E488 /* GlobalDetectionCRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDetectionCRViewController.h; sourceTree = "<group>"; };
 		AD7E99251B11D0FF00D7E488 /* GlobalDetectionCRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDetectionCRViewController.m; sourceTree = "<group>"; };
+		AD82522B1B25D5A300B213E4 /* SetExaminerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetExaminerCell.h; sourceTree = "<group>"; };
+		AD82522C1B25D5A300B213E4 /* SetExaminerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetExaminerCell.m; sourceTree = "<group>"; };
 		AD8BFD1A1B032D8200D7D053 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		AD8BFD1B1B032D8200D7D053 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AD8BFD201B03EE0C00D7D053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				ADA66D2A1B23697C0031B5E7 /* MXPullDownMenu.h */,
 				ADA66D2B1B23697C0031B5E7 /* MXPullDownMenu.m */,
 				AD8BFD211B03EE0C00D7D053 /* Main.storyboard */,
+				AD82522B1B25D5A300B213E4 /* SetExaminerCell.h */,
+				AD82522C1B25D5A300B213E4 /* SetExaminerCell.m */,
 				AD2DC8DB1B24860700230758 /* ExecuteSetOperatorViewController.h */,
 				AD2DC8DC1B24860700230758 /* ExecuteSetOperatorViewController.m */,
 				AD2DC8D21B24811800230758 /* SetOperator.h */,
@@ -392,6 +397,7 @@
 				ADE5217B1B20B3C1001A37B7 /* ExecuteWaterTestPressureViewController.m in Sources */,
 				ADA7C8B01B0B34510078B31A /* AllBottleCustomCell.m in Sources */,
 				ADF33DE01B205D9100936497 /* GlobalDetectCell.m in Sources */,
+				AD82522D1B25D5A300B213E4 /* SetExaminerCell.m in Sources */,
 				AD8BFD1C1B032D8200D7D053 /* SearchViewController.m in Sources */,
 				AD2DC8D71B24821000230758 /* ExecuteAirProofViewController.m in Sources */,
 				ADE9AEE31B0B767A00135EAF /* NSString+URLEncoding.m in Sources */,

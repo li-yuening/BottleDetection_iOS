@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SetOperator : UITableViewController
+@property (nonatomic,strong) NSMutableArray *listData;
+@property (nonatomic,strong) NSMutableData *datas;
+- (void)startRequest;
 
 @end
