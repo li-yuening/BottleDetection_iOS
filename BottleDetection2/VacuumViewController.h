@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface VacuumViewController : UITableViewController
+@property (nonatomic,strong) NSMutableArray* listData;
+@property (nonatomic,strong) NSMutableData *datas;
+- (void)startRequest;
 
 @end

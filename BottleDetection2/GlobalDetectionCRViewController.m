@@ -29,8 +29,8 @@
 
 - (void)startRequest {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/WaterTestPressure.html"];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"GlobalDetect?bottleType=1"]];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/WaterTestPressure.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"GlobalDetect?bottleType=1"]];
     //NSLog(@"%@",strURL);
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
