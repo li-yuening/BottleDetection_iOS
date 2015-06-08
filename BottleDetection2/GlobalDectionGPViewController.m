@@ -15,6 +15,7 @@
 @implementation GlobalDectionGPViewController
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     self.navigationController.toolbarHidden = NO;
 }
 
@@ -24,8 +25,8 @@
 
 - (void)startRequest {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/WaterTestPressure.html"];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"GlobalDetect?bottleType=0"]];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/WaterTestPressure.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"GlobalDetect?bottleType=0"]];
     //NSLog(@"%@",strURL);
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
@@ -67,7 +68,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GlobalDetectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GlobalDetectCell" forIndexPath:indexPath];
+    GlobalDetectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GlobalDetectGPCell" forIndexPath:indexPath];
     
     NSMutableDictionary*  dict = self.listData[indexPath.row];
     cell.bottleDetectNumberLabel.text = [dict objectForKey:@"bottleDetectNumber"];

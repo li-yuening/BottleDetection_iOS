@@ -173,7 +173,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
 - (IBAction)saveGDGPResult:(id)sender {
     [self startSaveGDGPRequest];
 }
