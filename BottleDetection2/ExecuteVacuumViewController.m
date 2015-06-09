@@ -83,13 +83,13 @@
     }
 }
 
-- (NSString *)makeDate:(int)validTime {
+- (NSString *)makeDate:(NSInteger)validTime {
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
     NSUInteger year = [dateComponent year];
-    NSString *yearString = [NSString stringWithFormat:@"%lu",year+validTime];
+    NSString *yearString = [NSString stringWithFormat:@"%u",year+validTime];
     NSInteger month = [dateComponent month];
     NSString *monthString = [NSString stringWithFormat:@"%ld",(long)month];
     if (month < 10) {

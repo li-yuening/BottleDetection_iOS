@@ -23,6 +23,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveVacuumButton;
 @property (nonatomic,strong) NSDictionary *sendParameters;
 @property (nonatomic,strong) NSMutableData *datas;
-@property (readwrite,assign) int validTime;
+@property (readwrite,assign) NSInteger validTime;
 
 @end
