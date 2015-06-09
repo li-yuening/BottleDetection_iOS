@@ -111,7 +111,7 @@
 		ADA66D2E1B23E6640031B5E7 /* AirProofTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirProofTestViewController.m; sourceTree = "<group>"; };
 		ADA7C8AE1B0B34510078B31A /* AllBottleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBottleCustomCell.h; sourceTree = "<group>"; };
 		ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBottleCustomCell.m; sourceTree = "<group>"; };
-		ADE34BD41AF4E08D00232DCB /* 气瓶检验信息化系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "气瓶检验信息化系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleDetection2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE34BD81AF4E08D00232DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE34BD91AF4E08D00232DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADE34BDB1AF4E08D00232DCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		ADE34BD51AF4E08D00232DCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADE34BD41AF4E08D00232DCB /* 气瓶检验信息化系统.app */,
+				ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */,
 				ADE34BED1AF4E08D00232DCB /* BottleDetection2Tests.xctest */,
 			);
 			name = Products;
@@ -296,7 +296,7 @@
 			);
 			name = BottleDetection2;
 			productName = BottleDetection2;
-			productReference = ADE34BD41AF4E08D00232DCB /* 气瓶检验信息化系统.app */;
+			productReference = ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ADE34BEC1AF4E08D00232DCB /* BottleDetection2Tests */ = {
@@ -542,7 +542,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "气瓶检验信息化系统";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -553,7 +553,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "气瓶检验信息化系统";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
