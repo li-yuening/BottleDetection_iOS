@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A83DA27C-B1EF-49B8-921C-DB6A87435410</string>
+	<key>IDESourceControlProjectName</key>
+	<string>气瓶检验 -信息化系统</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>557FA2DFD4DA77FF29572D91192080040C1B3CF7</key>
+		<string>https://github.com/tontwen-lyn/BottleDetection_iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>气瓶检验 -信息化系统.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>557FA2DFD4DA77FF29572D91192080040C1B3CF7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tontwen-lyn/BottleDetection_iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>557FA2DFD4DA77FF29572D91192080040C1B3CF7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>557FA2DFD4DA77FF29572D91192080040C1B3CF7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BottleDetection2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

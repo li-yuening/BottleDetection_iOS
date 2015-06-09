@@ -17,7 +17,7 @@
                BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
                BuildableName = "BottleDetection2.app"
                BlueprintName = "BottleDetection2"
-               ReferencedContainer = "container:BottleDetection2.xcodeproj">
+               ReferencedContainer = "container:BottleDetection.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "ADE34BEC1AF4E08D00232DCB"
                BuildableName = "BottleDetection2Tests.xctest"
                BlueprintName = "BottleDetection2Tests"
-               ReferencedContainer = "container:BottleDetection2.xcodeproj">
+               ReferencedContainer = "container:BottleDetection.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "ADE34BEC1AF4E08D00232DCB"
                BuildableName = "BottleDetection2Tests.xctest"
                BlueprintName = "BottleDetection2Tests"
-               ReferencedContainer = "container:BottleDetection2.xcodeproj">
+               ReferencedContainer = "container:BottleDetection.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
             BuildableName = "BottleDetection2.app"
             BlueprintName = "BottleDetection2"
-            ReferencedContainer = "container:BottleDetection2.xcodeproj">
+            ReferencedContainer = "container:BottleDetection.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
             BuildableName = "BottleDetection2.app"
             BlueprintName = "BottleDetection2"
-            ReferencedContainer = "container:BottleDetection2.xcodeproj">
+            ReferencedContainer = "container:BottleDetection.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,7 +98,7 @@
             BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
             BuildableName = "BottleDetection2.app"
             BlueprintName = "BottleDetection2"
-            ReferencedContainer = "container:BottleDetection2.xcodeproj">
+            ReferencedContainer = "container:BottleDetection.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
