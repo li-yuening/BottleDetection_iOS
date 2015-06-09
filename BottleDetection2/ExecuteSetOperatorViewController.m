@@ -18,6 +18,8 @@
     self.bottleDetectNumberLabel.text = [self.sendParameters objectForKey:@"bottleDetectNumber"];
     self.bottleNumberLabel.text = [self.sendParameters objectForKey:@"bottleNumber"];
     self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
+    self.finalDetectDateLabel.text = [self.sendParameters objectForKey:@"finalDetectDate"];
+    self.finalDetectResultLabel.text = [self.sendParameters objectForKey:@"finalDetectResult"];
     self.nextCheckDateLabel.text = [self.sendParameters objectForKey:@"bottleNextCheckDate"];
     self.reportExaminer = [self.sendParameters objectForKey:@"reportExaminer"];
     self.reportChecker = [self.sendParameters objectForKey:@"reportChecker"];
@@ -28,14 +30,16 @@
     
     MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:testArray selectedColor:[UIColor colorWithRed:10.0/255.0 green:96.0/255.0 blue:254.0/255.0 alpha:1.0]];
     menu.delegate = self;
-    menu.frame = CGRectMake(0, 284, menu.frame.size.width, menu.frame.size.height);
+    menu.frame = CGRectMake(0, 60, menu.frame.size.width, menu.frame.size.height);
     [self.view addSubview:menu];
 }
 
 - (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row
 {
     if (column == 0) {
-        if (row == 1) {
+        if (row == 0) {
+            self.reportExaminer = @"";
+        } else if (row == 1) {
             self.reportExaminer = @"冯攀";
         } else if (row == 2) {
             self.reportExaminer = @"管理员";
@@ -57,7 +61,9 @@
             self.reportExaminer = @"周嘉楠";
         }
     } else if (column == 1) {
-        if (row == 1) {
+        if (row == 0) {
+            self.reportChecker = @"";
+        } else if (row == 1) {
             self.reportChecker = @"冯攀";
         } else if (row == 2) {
             self.reportChecker = @"管理员";
@@ -148,6 +154,12 @@
 }
 
 - (IBAction)saveSetExaminerResult:(id)sender {
-    [self startSaveSetExaminerRequest];
+    if (([self.reportExaminer isEqualToString:@""])||([self.reportChecker isEqualToString:@""])) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未选择报告检验员或编制员，无法保存！" message:@"请选择" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+        [alertView show];
+    } else {
+        [self startSaveSetExaminerRequest];
+
+    }
 }
 @end

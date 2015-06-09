@@ -17,6 +17,10 @@
     self.navigationController.toolbarHidden = YES;
 }
 
+-(IBAction)keyboardHide:(id)sender {
+    [sender resignFirstResponder];
+}
+
 - (IBAction)saveGDCRResult:(id)sender {
     [self startSaveGDCRRequest];
 }

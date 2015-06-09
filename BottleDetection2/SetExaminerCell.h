@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reportExaminerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *reportCheckerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *finalDetectResultLabel;
 
 @end

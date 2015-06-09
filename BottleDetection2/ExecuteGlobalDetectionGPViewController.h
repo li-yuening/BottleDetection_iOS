@@ -33,5 +33,5 @@
 @property (nonatomic,strong) NSString *innerDetail;
 @property (nonatomic,strong) NSString *globalSub5Detail;
 @property (nonatomic,strong) NSString *globalSub6Detail;
-
+- (IBAction)keyboardHide:(id)sender;
 @end

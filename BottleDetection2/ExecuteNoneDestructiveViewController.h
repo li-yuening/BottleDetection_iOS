@@ -24,5 +24,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *detail;
 - (IBAction)saveNDResult:(id)sender;
 - (void)startNDRequest;
+- (IBAction)keyboardHide:(id)sender;
 
 @end

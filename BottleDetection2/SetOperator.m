@@ -68,6 +68,12 @@
     cell.bottleDetectNumberLabel.text = [dict objectForKey:@"bottleDetectNumber"];
     cell.bottleNumberLabel.text = [dict objectForKey:@"bottleNumber"];
     cell.carNumberLabel.text = [dict objectForKey:@"carNumber"];
+    cell.finalDetectResultLabel.text = [dict objectForKey:@"finalDetectResult"];
+    if ([cell.finalDetectResultLabel.text isEqualToString:@"合格"]) {
+        cell.finalDetectResultLabel.textColor = [UIColor greenColor];
+    } else if ([cell.finalDetectResultLabel.text isEqualToString:@"判废"]){
+        cell.finalDetectResultLabel.textColor = [UIColor redColor];
+    }
     cell.reportExaminerLabel.text = [dict objectForKey:@"reportExaminer"];
     cell.reportExaminerLabel.textColor = [UIColor colorWithRed:10.0/255.0 green:96.0/255.0 blue:254.0/255.0 alpha:1.0];
     cell.reportCheckerLabel.text = [dict objectForKey:@"reportChecker"];

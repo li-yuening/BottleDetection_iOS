@@ -24,4 +24,5 @@
 @property (nonatomic,strong) NSDictionary *sendParameters;
 @property (nonatomic,strong) NSMutableData *datas;
 @property (readwrite,assign) int validTime;
+
 @end

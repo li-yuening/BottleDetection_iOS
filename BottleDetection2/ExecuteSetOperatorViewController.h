@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *bottleNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nextCheckDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *finalDetectDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *finalDetectResultLabel;
 - (IBAction)saveSetExaminerResult:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveSEButton;
 

@@ -12,6 +12,10 @@
 
 @implementation ExecuteGlobalDetectionGPViewController
 
+- (IBAction)keyboardHide:(id)sender {
+    [sender resignFirstResponder];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.toolbarHidden = YES;

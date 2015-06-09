@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
     self.bottleNumberLabel.text = [self.sendParameters objectForKey:@"bottleNumber"];
     self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
     self.rfidNumberLabel.text = [self.sendParameters objectForKey:@"rfidNumber"];
@@ -34,7 +36,7 @@
     self.bottleFirstInstallDateLabel.text = [self.sendParameters objectForKey:@"bottleFirstInstallDate"];
     self.bottleLastCheckDateLabel.text = [self.sendParameters objectForKey:@"bottleLastCheckDate"];
     self.bottleNextCheckDateLabel.text = [self.sendParameters objectForKey:@"bottleNextCheckDate"];
-    self.bottleServiceYearsLabel.text = [self.sendParameters objectForKey:@"bottleServiceYears"];
+    self.bottleServiceYearsLabel.text = [NSString stringWithFormat:@"%lu",(long)[[self.sendParameters objectForKey:@"bottleServiceYears"] integerValue]];
     self.bottleBelongedLabel.text = [self.sendParameters objectForKey:@"bottleBelonged"];
     self.bottleLicenseLabel.text = [self.sendParameters objectForKey:@"bottleLicense"];
     self.bottleGuigeLabel.text = [self.sendParameters objectForKey:@"bottleGuige"];

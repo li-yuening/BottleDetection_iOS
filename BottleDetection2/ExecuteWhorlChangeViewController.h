@@ -23,5 +23,6 @@
 @property (nonatomic,strong) NSMutableData *datas;
 @property (nonatomic,strong) NSString *bottleValveType;
 @property (nonatomic,strong) NSString *bottleValveChangeResult;
+- (IBAction)keyboardHide:(id)sender;
 
 @end

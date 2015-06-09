@@ -28,6 +28,7 @@
     menu.delegate = self;
     menu.frame = CGRectMake(0, 240, menu.frame.size.width, menu.frame.size.height);
     [self.view addSubview:menu];
+    self.saveAPButton.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,12 +42,18 @@
 
 - (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row
 {
-    if ((column == 0)&&(row == 1)) {
-        self.airProofTestMethod = @"???";
+    if ((column == 0)&&(row == 0)) {
+        self.airProofTestMethod = @"";
+    }else if ((column == 0)&&(row == 1)) {
+        self.airProofTestMethod = @"浸水法";
         self.testMediumLabel.text = @"空气";
-        self.testMediumTempLabel.text = @"20";
-        self.testPressureLabel.text = @"40";
-        self.testKeepTimeLabel.text = @"10";
+        self.testMediumTempLabel.text = @"9";
+        self.testPressureLabel.text = @"20";
+        self.testKeepTimeLabel.text = @"2";
+    }
+    
+    if (self.airProofTestMethod != NULL) {
+        self.saveAPButton.enabled = YES;
     }
 }
 
@@ -120,7 +127,7 @@
 }
 
 - (IBAction)saveAPResult:(id)sender {
-    if (self.airProofTestMethod == NULL) {
+    if ([self.airProofTestMethod isEqualToString:@""]) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未选择试验方法，无法保存！" message:@"请选择" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
         [alertView show];
     }else {

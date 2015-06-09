@@ -121,13 +121,7 @@
 
 //todo
 - (IBAction)keyboardHide:(id)sender {
-    
-    if (sender==self.bottleNumberLabel) {
-        [self.carNumberLabel becomeFirstResponder];
-    }
-    else if (sender==self.carNumberLabel) {
-        [self.bottleMadeCountryLabel becomeFirstResponder];
-    }
+    [sender resignFirstResponder];
 }
 
 - (void)sendAddBottleRequest {

@@ -19,6 +19,10 @@
     self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
 }
 
+- (IBAction)keyboardHide:(id)sender {
+    [sender resignFirstResponder];
+}
+
 - (void)startNDRequest{
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/AllBottle.html"];

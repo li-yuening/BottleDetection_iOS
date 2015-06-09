@@ -46,7 +46,9 @@
     if ((section == 1)&&(row == 3)) {
         if (self.vacuumOverCell.accessoryType == UITableViewCellAccessoryNone) {
             self.vacuumOverCell.accessoryType = UITableViewCellAccessoryCheckmark;
-            self.saveVacuumButton.enabled = YES;
+            if (self.validTime != 0) {
+                self.saveVacuumButton.enabled = YES;
+            }
         } else if (self.vacuumOverCell.accessoryType == UITableViewCellAccessoryCheckmark) {
             self.vacuumOverCell.accessoryType = UITableViewCellAccessoryNone;
             self.saveVacuumButton.enabled = NO;
@@ -59,7 +61,9 @@
 
 - (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row
 {
-    if ((column == 0)&&(row == 1)) {
+    if ((column == 0)&&(row == 0)) {
+        self.validTime = 0;
+    }else if ((column == 0)&&(row == 1)) {
         self.validTime = 1;
     }else if ((column == 0)&&(row == 2)) {
         self.validTime = 2;
@@ -73,6 +77,10 @@
         self.validTime = 6;
     }
     self.nextCheckDateLabel.text = [self makeDate:self.validTime];
+    
+    if ((self.validTime != 0)&&(self.vacuumOverCell.accessoryType == UITableViewCellAccessoryCheckmark)) {
+        self.saveVacuumButton.enabled = YES;
+    }
 }
 
 - (NSString *)makeDate:(int)validTime {

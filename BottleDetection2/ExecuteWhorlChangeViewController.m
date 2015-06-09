@@ -23,13 +23,17 @@
     self.saveBVCButton.enabled = NO;
     
     NSArray *testArray;
-    testArray = @[@[@"选择瓶阀型号",@"QS1", @"QS2", @"QS3"],@[@"选择检测结果",@"合格",@"更换"]];
+    testArray = @[@[@"选择瓶阀型号",@"QF-T1",@"QF-5T",@"C351",@"CTF-X7",@"QF-T1Z"],@[@"选择检测结果",@"合格",@"更换新阀"]];
     
     
     MXPullDownMenu *menu = [[MXPullDownMenu alloc] initWithArray:testArray selectedColor:[UIColor colorWithRed:10.0/255.0 green:96.0/255.0 blue:254.0/255.0 alpha:1.0]];
     menu.delegate = self;
     menu.frame = CGRectMake(0, 285, menu.frame.size.width, menu.frame.size.height);
     [self.view addSubview:menu];
+}
+
+- (IBAction)keyboardHide:(id)sender {
+    [sender resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,27 +48,40 @@
 - (void)PullDownMenu:(MXPullDownMenu *)pullDownMenu didSelectRowAtColumn:(NSInteger)column row:(NSInteger)row
 {
     //NSLog(@"%ld -- %ld", (long)column, (long)row);
-    if ((column == 0)&&(row == 1)) {
-        self.bottleValveType = @"QT01";
-        self.testPressureLabel.text = @"40";
-        self.testMediumLabel.text = @"空气";
-        self.saveBVCButton.enabled = YES;
-    }else if ((column == 0)&&(row == 2)) {
-        self.bottleValveType = @"QT02";
-        self.testPressureLabel.text = @"30";
-        self.testMediumLabel.text = @"空气";
-        self.saveBVCButton.enabled = YES;
-    }else if ((column == 0)&&(row == 3)) {
-        self.bottleValveType = @"QT03";
+    if ((column == 0)&&(row == 0)) {
+        self.bottleValveType = @"";
+    }else if ((column == 0)&&(row == 1)) {
+        self.bottleValveType = @"QF-T1";
         self.testPressureLabel.text = @"20";
         self.testMediumLabel.text = @"空气";
-        self.saveBVCButton.enabled = YES;
+    }else if ((column == 0)&&(row == 2)) {
+        self.bottleValveType = @"QF-5T";
+        self.testPressureLabel.text = @"20";
+        self.testMediumLabel.text = @"空气";
+    }else if ((column == 0)&&(row == 3)) {
+        self.bottleValveType = @"C351";
+        self.testPressureLabel.text = @"20";
+        self.testMediumLabel.text = @"空气";
+    }else if ((column == 0)&&(row == 4)) {
+        self.bottleValveType = @"CTF-X7";
+        self.testPressureLabel.text = @"20";
+        self.testMediumLabel.text = @"空气";
+    }else if ((column == 0)&&(row == 5)) {
+        self.bottleValveType = @"QF-T1Z";
+        self.testPressureLabel.text = @"20";
+        self.testMediumLabel.text = @"空气";
     }
     
-    if ((column == 1)&&(row == 1)) {
+    if ((column == 1)&&(row == 0)) {
+        self.bottleValveChangeResult = @"";
+    } else if ((column == 1)&&(row == 1)) {
         self.bottleValveChangeResult = @"合格";
     } else if ((column == 1)&&(row == 2)) {
-        self.bottleValveChangeResult = @"更换";
+        self.bottleValveChangeResult = @"更换新阀";
+    }
+    
+    if ((self.bottleValveType != NULL)&&(self.bottleValveChangeResult != NULL)) {
+        self.saveBVCButton.enabled = YES;
     }
 }
 
@@ -72,7 +89,7 @@
     if ([self.valveNumberLabel.text isEqualToString:@""]) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未填写瓶阀编号，无法保存！" message:@"请填写" delegate:nil cancelButtonTitle:@"马上写" otherButtonTitles: nil];
         [alertView show];
-    }else if ((self.bottleValveType == NULL)||(self.bottleValveChangeResult == NULL)) {
+    }else if (([self.bottleValveType isEqualToString:@""])||([self.bottleValveChangeResult isEqualToString:@""])) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未选择瓶阀类型或检验结果，无法保存！" message:@"请选择" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
         [alertView show];
     }else {

@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *metalDetectTextField;
 @property (weak, nonatomic) IBOutlet UITextField *whorlDetectTextField;
 - (IBAction)saveGDCRResult:(id)sender;
+- (IBAction)keyboardHide:(id)sender;
 
 @end

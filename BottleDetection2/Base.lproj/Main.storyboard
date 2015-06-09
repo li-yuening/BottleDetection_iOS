@@ -140,7 +140,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="查看和搜索" id="Kwd-BJ-00L">
+                            <tableViewSection headerTitle="查看信息" id="Kwd-BJ-00L">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="e6n-so-8A2">
                                         <rect key="frame" x="0.0" y="114" width="320" height="44"/>
@@ -164,7 +164,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="流程" id="pgD-hO-JwU">
+                            <tableViewSection headerTitle="操作流程" id="pgD-hO-JwU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="vy2-5g-Rf9">
                                         <rect key="frame" x="0.0" y="201" width="320" height="44"/>
@@ -275,44 +275,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lci-u2-JZ8">
                                                     <rect key="frame" x="24" y="14" width="34" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="编辑" id="j0d-Ay-0c3">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="3O7-N9-u09">
-                                        <rect key="frame" x="0.0" y="508" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3O7-N9-u09" id="7lB-ZW-A6l">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="汽车信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vkC-in-gnE">
-                                                    <rect key="frame" x="24" y="14" width="68" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="gdS-cY-pQd">
-                                        <rect key="frame" x="0.0" y="552" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gdS-cY-pQd" id="Vsm-n0-ZrZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生产厂家" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CAc-6R-2Uh">
-                                                    <rect key="frame" x="24" y="14" width="68" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -610,7 +572,7 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="0 / 0" id="CxB-Zt-OOc">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="CUI-uO-fBd">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="search" id="CUI-uO-fBd">
                             <connections>
                                 <segue destination="JeB-oa-Ys4" kind="push" id="NIb-Tb-1YA"/>
                             </connections>
@@ -1576,6 +1538,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="Ees-nl-1Hf"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电子芯片编号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ojq-yt-wYc">
                                                     <rect key="frame" x="24" y="13" width="96" height="28"/>
@@ -1599,6 +1564,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="0am-Jc-sGk"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制造国别" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Qn-QD-5jo">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -1654,6 +1622,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="m17-bM-jAj"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1670,6 +1641,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="QUr-Jd-OrF"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制造单位代码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ef3-DI-NFe">
                                                     <rect key="frame" x="24" y="13" width="96" height="28"/>
@@ -1693,6 +1667,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="mkE-Bv-Ry8"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制造单位许可证号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jt1-xE-Zig">
                                                     <rect key="frame" x="24" y="13" width="128" height="28"/>
@@ -1723,6 +1700,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="NdJ-xz-Baw"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1739,6 +1719,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="oAb-zr-5c8"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水压试验压力*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="piD-ei-yhx">
                                                     <rect key="frame" x="24" y="13" width="102" height="28"/>
@@ -1762,6 +1745,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="SaN-gk-WrR"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设计壁厚*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cjw-Za-ipb">
                                                     <rect key="frame" x="24" y="13" width="70" height="28"/>
@@ -1785,6 +1771,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="ayI-Jb-MHs"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出厂实际重量*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GcL-zo-gVe">
                                                     <rect key="frame" x="24" y="13" width="102" height="28"/>
@@ -1808,6 +1797,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="JF6-U1-v1t"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出厂实际容积*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U5c-rG-P5U">
                                                     <rect key="frame" x="24" y="13" width="102" height="28"/>
@@ -1831,6 +1823,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="4UU-UZ-pql"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制造年月*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pHH-od-Xre">
                                                     <rect key="frame" x="24" y="13" width="70" height="28"/>
@@ -1854,6 +1849,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="6uN-bl-ll2"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初始安装日期*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o7l-Qd-uZH">
                                                     <rect key="frame" x="24" y="13" width="102" height="28"/>
@@ -1877,6 +1875,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="gWO-sf-6XP"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上次检验日期*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gke-Rm-1g1">
                                                     <rect key="frame" x="24" y="13" width="102" height="28"/>
@@ -1900,6 +1901,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="Npg-3I-t3e"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下次检验日期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="syc-bi-Hco">
                                                     <rect key="frame" x="24" y="13" width="96" height="28"/>
@@ -1923,6 +1927,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="syZ-lw-0yS"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用年限" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iYm-l0-I3S">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -1953,6 +1960,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="ame-qm-UE6"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四川省成都市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5uP-4y-kQn">
                                                     <rect key="frame" x="144" y="13" width="96" height="28"/>
@@ -1976,6 +1986,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="Nc9-AG-gD0"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="气瓶登记证编号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ub7-hm-LNC">
                                                     <rect key="frame" x="24" y="13" width="112" height="28"/>
@@ -1999,6 +2012,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="Npy-Sy-if5"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="气瓶规格" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XA1-fW-Rvb">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2022,6 +2038,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="9zo-mA-Bx7"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="安装单位" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n32-ly-gbn">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2045,6 +2064,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="wxa-2e-Xqv"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公称容积" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wB3-9b-o0e">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2068,6 +2090,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="9Vw-ll-MJY"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆种类" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MEB-3g-XTi">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2091,6 +2116,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="75p-AW-27p"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="厂牌型号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XLa-XY-V9U">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2114,6 +2142,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="sFG-gY-S4z"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车主姓名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DCC-hV-6Ra">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2137,6 +2168,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="Bsb-G2-WRZ"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车主电话" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xcq-FX-Gho">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2160,6 +2194,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="hUe-Nc-TeC"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用单位*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQ3-9k-1gj">
                                                     <rect key="frame" x="24" y="13" width="70" height="28"/>
@@ -2183,6 +2220,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="BEd-AX-CGt" eventType="editingDidEndOnExit" id="wnW-yF-jpT"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="单位地址" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CQD-C3-LWw">
                                                     <rect key="frame" x="24" y="13" width="64" height="28"/>
@@ -2455,7 +2495,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoneDestructiveCell" rowHeight="72" id="LUp-0Q-uMk" customClass="GlobalDetectCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LUp-0Q-uMk" id="zDh-Y3-UOp">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="71"/>
@@ -2988,7 +3028,7 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="川A99999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2gd-82-Fik">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合格" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2gd-82-Fik">
                                             <rect key="frame" x="215" y="25" width="64" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -3009,12 +3049,20 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="川A99999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rC9-P1-EIy">
+                                            <rect key="frame" x="155" y="25" width="64" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="bottleDetectNumberLabel" destination="Isy-St-1Mi" id="5wZ-1c-FPc"/>
                                     <outlet property="bottleNumberLabel" destination="Njo-x1-cou" id="sjt-YM-8pd"/>
-                                    <outlet property="carNumberLabel" destination="2gd-82-Fik" id="vtX-QN-6Qt"/>
+                                    <outlet property="carNumberLabel" destination="rC9-P1-EIy" id="2z0-mb-jPY"/>
+                                    <outlet property="finalDetectResultLabel" destination="2gd-82-Fik" id="6QZ-H7-cpe"/>
                                     <outlet property="reportCheckerLabel" destination="HpS-ZA-6TA" id="nUq-Ic-ubq"/>
                                     <outlet property="reportExaminerLabel" destination="aJO-hD-9UZ" id="k7g-2F-AHF"/>
                                     <segue destination="cQn-cN-B8k" kind="push" identifier="executeSetOperatorSegue" id="LzK-EJ-5gu"/>
@@ -3042,7 +3090,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GlobalDetectGPCell" rowHeight="72" id="rbr-yO-LM6" customClass="GlobalDetectCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="72"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rbr-yO-LM6" id="aIJ-VP-r97">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="71"/>
@@ -3241,6 +3289,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="q07-Ih-7jw" eventType="editingDidEndOnExit" id="xOb-BZ-JNT"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3291,6 +3342,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="q07-Ih-7jw" eventType="editingDidEndOnExit" id="Lm4-PP-7AQ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3443,6 +3497,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="VXS-PL-HO6" eventType="editingDidEndOnExit" id="MLN-aE-7v8"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3476,6 +3533,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="VXS-PL-HO6" eventType="editingDidEndOnExit" id="NSB-G5-Rhu"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3509,6 +3569,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="VXS-PL-HO6" eventType="editingDidEndOnExit" id="6RI-SZ-uiD"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3542,6 +3605,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="VXS-PL-HO6" eventType="editingDidEndOnExit" id="hC5-js-kkc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3575,6 +3641,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="VXS-PL-HO6" eventType="editingDidEndOnExit" id="cgf-Tt-ts8"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3608,6 +3677,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="VXS-PL-HO6" eventType="editingDidEndOnExit" id="omN-tn-Ky2"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3863,6 +3935,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="Xdc-9p-h01" eventType="editingDidEndOnExit" id="rhW-ER-wIp"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3886,6 +3961,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="Xdc-9p-h01" eventType="editingDidEndOnExit" id="WhV-rp-uaF"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3909,6 +3987,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="Xdc-9p-h01" eventType="editingDidEndOnExit" id="hH3-RQ-9nN"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3932,6 +4013,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="Xdc-9p-h01" eventType="editingDidEndOnExit" id="bZm-hI-eCQ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3955,6 +4039,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="Xdc-9p-h01" eventType="editingDidEndOnExit" id="PGx-Fs-woc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -3978,6 +4065,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="Xdc-9p-h01" eventType="editingDidEndOnExit" id="nNZ-tj-geo"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -4250,7 +4340,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="检测结果" id="dWH-Ed-46c">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Awr-9E-Bee">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Awr-9E-Bee">
                                         <rect key="frame" x="0.0" y="289" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Awr-9E-Bee" id="580-7l-ePx">
@@ -4400,6 +4490,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="keyboardHide:" destination="fAI-fW-Qh5" eventType="editingDidEndOnExit" id="4mX-GH-xXl"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -4726,6 +4819,7 @@
                         <outlet property="bottleDetectNumberLabel" destination="IA3-vk-JQw" id="puv-b6-2t4"/>
                         <outlet property="bottleNumberLabel" destination="vPA-uO-9Yb" id="Bb8-fE-PJf"/>
                         <outlet property="carNumberLabel" destination="UC9-rK-pRs" id="gLu-Xw-gvL"/>
+                        <outlet property="saveAPButton" destination="ZPB-Xb-Htx" id="JhU-RS-xdl"/>
                         <outlet property="testKeepTimeLabel" destination="SFH-ze-Fpn" id="R7f-Gl-m0M"/>
                         <outlet property="testMediumLabel" destination="AOv-rw-JTX" id="DpG-EV-p5X"/>
                         <outlet property="testMediumTempLabel" destination="mTG-zC-NSq" id="R4c-kO-a7p"/>
@@ -4937,10 +5031,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
+                            <tableViewSection headerTitle="操作" id="stV-bo-TcN">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BMi-Eq-3gL">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BMi-Eq-3gL" id="Td5-gB-qzN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="气瓶信息" id="Yxj-kg-xdX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="12K-X1-Uiq">
-                                        <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="201" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="12K-X1-Uiq" id="e9c-NZ-QnM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -4964,7 +5070,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aS1-D6-jFm">
-                                        <rect key="frame" x="0.0" y="158" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="245" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aS1-D6-jFm" id="F0D-Kz-2Sp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -4988,7 +5094,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aUH-Vr-JAU">
-                                        <rect key="frame" x="0.0" y="202" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="289" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aUH-Vr-JAU" id="Hd8-Q8-1qG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -5011,8 +5117,56 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DhC-oW-UDQ">
+                                        <rect key="frame" x="0.0" y="333" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DhC-oW-UDQ" id="nz7-po-UzV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最终检验日期" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pah-6R-fEI">
+                                                    <rect key="frame" x="24" y="13" width="102" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4DO-eJ-XEv">
+                                                    <rect key="frame" x="117" y="13" width="185" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3m2-l1-eql">
+                                        <rect key="frame" x="0.0" y="377" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3m2-l1-eql" id="IdM-d7-okd">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最终检验结果" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YJF-ew-14F">
+                                                    <rect key="frame" x="24" y="13" width="102" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZrM-kM-hmj">
+                                                    <rect key="frame" x="117" y="13" width="185" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HrM-Zg-eRO">
-                                        <rect key="frame" x="0.0" y="246" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="421" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HrM-Zg-eRO" id="PGx-F4-QAF">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -5037,18 +5191,6 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="操作" id="stV-bo-TcN">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="BMi-Eq-3gL">
-                                        <rect key="frame" x="0.0" y="333" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BMi-Eq-3gL" id="Td5-gB-qzN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="cQn-cN-B8k" id="4Vq-u1-YuH"/>
@@ -5066,6 +5208,8 @@
                         <outlet property="bottleDetectNumberLabel" destination="0kp-58-j4Q" id="4v6-zM-dXx"/>
                         <outlet property="bottleNumberLabel" destination="1Kt-eG-Qxx" id="B9P-9Z-0eP"/>
                         <outlet property="carNumberLabel" destination="Yan-mM-VSw" id="bSv-AU-h0s"/>
+                        <outlet property="finalDetectDateLabel" destination="4DO-eJ-XEv" id="mvw-w3-9aR"/>
+                        <outlet property="finalDetectResultLabel" destination="ZrM-kM-hmj" id="INT-Hc-rM9"/>
                         <outlet property="nextCheckDateLabel" destination="p5r-1i-WMW" id="3Pq-sq-4y2"/>
                         <outlet property="saveSEButton" destination="XAU-kO-7e0" id="lPS-0n-PtW"/>
                     </connections>

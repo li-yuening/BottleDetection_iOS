@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *bottleNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
 - (IBAction)saveAPResult:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveAPButton;
 
 @end
