@@ -29,7 +29,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.tableView.scrollEnabled = NO;
-    
+    self.navigationController.toolbarHidden = YES;
     self.operatorPwd.text = @"";
 }
 

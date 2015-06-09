@@ -34,8 +34,10 @@
     NSInteger row = [indexPath row];
     //NSLog(@"%ld",(long)row);
     
-    if (section == 1) {
+    if (self.hasSaved == NO) {
         self.saveCPButton.enabled = YES;
+    }
+    if (section == 1) {
         if (row == 0) {
             self.cpTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
             self.cpFalseCell.accessoryType = UITableViewCellAccessoryNone;
@@ -53,6 +55,7 @@
     } else {
         [self startSaveCPRequest];
         self.saveCPButton.enabled = NO;
+        self.hasSaved = YES;
     }
 }
 
@@ -79,7 +82,7 @@
     //data in dict
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleNumber"],@"bottleNumber",[self.sendParameters objectForKey:@"bottleType"],@"bottleType",[self.sendParameters objectForKey:@"carNumber"],@"carNumber",cpResultString,@"preDetectResult",appDelegate.operatorName,@"operatorName",nil];
     NSError *error;
-
+    
     //dict data to json NSData
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
                                                        options:0

@@ -15,6 +15,7 @@
 - (IBAction)saveCP:(id)sender;
 - (void)startSaveCPRequest;
 @property (weak, nonatomic) IBOutlet UILabel *bottleDetectNumberLabel;
+@property (readwrite,assign) BOOL hasSaved;
 @property (weak, nonatomic) IBOutlet UILabel *rptNoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *carNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bottleTypeLabel;

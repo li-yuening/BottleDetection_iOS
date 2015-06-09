@@ -19,8 +19,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.ipAddress = @"http://192.168.1.109:8080/BottleDetection2/servlet/";
+    //self.ipAddress = @"http://192.168.1.109:8080/BottleDetection2/servlet/";
+    self.ipAddress = [self getIPAddress];
     return YES;
+}
+
+- (NSString *)getIPAddress {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //获取完整路径
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"IPAddress.plist"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //判断是否存在IPAddress.plist
+    if (![fileManager fileExistsAtPath:plistPath]) {
+        //NSLog(@"bucunzai");
+        NSMutableDictionary *dictplist = [[NSMutableDictionary alloc ] init];
+        //设置属性值
+        [dictplist setObject:@"http://192.168.1.109:8080/BottleDetection2/servlet/" forKey:@"ipAddress"];
+        //写入文件
+        [dictplist writeToFile:plistPath atomically:YES];
+    } else {
+        NSDictionary *data = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+        self.ipAddress = [data objectForKey:@"ipAddress"];
+        //NSLog(@"%@",self.ipAddress);
+    }
+    NSString *ipAddressString;
+    return ipAddressString;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

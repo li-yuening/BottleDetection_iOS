@@ -18,15 +18,30 @@
 
 - (IBAction)saveIPAddress:(id)sender {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *ipHead = @"http://";
-    if ([self.ipAddressLabel.text isEqualToString:@""]) {
-        appDelegate.ipAddress = [ipHead stringByAppendingString:@"192.168.1.109"];
-    } else {
-        appDelegate.ipAddress = [ipHead stringByAppendingString:self.ipAddressLabel.text];
+    
+    if (![self.ipAddressLabel.text isEqualToString:@""]) {
+        NSString *ipHead = @"http://";
+        NSString *ipTail = @":8080/BottleDetection2/servlet/";
+        appDelegate.ipAddress = [NSString stringWithFormat:@"%@%@%@",ipHead,self.ipAddressLabel.text,ipTail];
+        [self writeIPPlist:appDelegate.ipAddress];
+        //NSLog(@"%@",appDelegate.ipAddress);
     }
-    NSString *ipTail = @":8080/BottleDetection2/servlet/";
-    appDelegate.ipAddress = [appDelegate.ipAddress stringByAppendingString:ipTail];
-    NSLog(@"%@",appDelegate.ipAddress);
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)writeIPPlist:(NSString *)ip {
+    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //获取路径对象
+    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    //获取完整路径
+    //NSString *documentsDirectory = [paths objectAtIndex:0];
+    //NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"IPAddress.plist"];
+    
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]stringByAppendingPathComponent:@"IPAddress.plist"];
+    NSMutableDictionary *applist = [[[NSMutableDictionary alloc]initWithContentsOfFile:path]mutableCopy];
+    
+    [applist setObject:ip forKey:@"ipAddress"];
+    [applist writeToFile:path atomically:YES];
 }
 @end

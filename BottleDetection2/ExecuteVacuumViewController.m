@@ -88,15 +88,15 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
-    int year = [dateComponent year];
-    NSString *yearString = [NSString stringWithFormat:@"%d",year+validTime];
-    int month = [dateComponent month];
-    NSString *monthString = [NSString stringWithFormat:@"%d",month];
+    NSUInteger year = [dateComponent year];
+    NSString *yearString = [NSString stringWithFormat:@"%lu",year+validTime];
+    NSInteger month = [dateComponent month];
+    NSString *monthString = [NSString stringWithFormat:@"%ld",(long)month];
     if (month < 10) {
         monthString = [@"0" stringByAppendingString:monthString];
     }
-    int day = [dateComponent day];
-    NSString *dayString = [NSString stringWithFormat:@"%d",day];
+    NSInteger day = [dateComponent day];
+    NSString *dayString = [NSString stringWithFormat:@"%ld",(long)day];
     if (day < 10) {
         dayString = [@"0" stringByAppendingString:dayString];
     }
