@@ -107,6 +107,7 @@
 */
 
 - (IBAction)logIn:(id)sender {
+    //NSLog(@"haha");
     if ([self nullCheck] == YES) {
         [self startRequest];
     }
@@ -129,8 +130,8 @@
 - (void)startRequest {
     //post method
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/Login.html"];
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"Login"]];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/Login.html"];
+    NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"Login"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
@@ -180,7 +181,8 @@
 
 
 -(void) connection:(NSURLConnection *)connection didFailWithError: (NSError *)error {
-    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"连接超时！" message:@"请检查ip输入是否正确并检查网络是否连接" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles: nil];
+    [alertView show];
     NSLog(@"%@",[error localizedDescription]);
 }
 
