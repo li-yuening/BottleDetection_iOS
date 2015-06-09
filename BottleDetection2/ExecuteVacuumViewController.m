@@ -89,7 +89,7 @@
     NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
     NSUInteger year = [dateComponent year];
-    NSString *yearString = [NSString stringWithFormat:@"%u",year+validTime];
+    NSString *yearString = [NSString stringWithFormat:@"%lu",year+validTime];
     NSInteger month = [dateComponent month];
     NSString *monthString = [NSString stringWithFormat:@"%ld",(long)month];
     if (month < 10) {
@@ -114,7 +114,7 @@
     //NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     //data in dict
-    NSString *validTimeString = [NSString stringWithFormat:@"%d",self.validTime];
+    NSString *validTimeString = [NSString stringWithFormat:@"%ld",(long)self.validTime];
     
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[self.sendParameters objectForKey:@"bottleDetectNumber"],@"bottleDetectNumber",appDelegate.operatorName,@"operatorName",self.vacuumPressureTextField.text,@"vacuumPressure",@"1",@"vacuumResult",validTimeString,@"yrs",nil];
     NSError *error;

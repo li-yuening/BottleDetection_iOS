@@ -111,7 +111,7 @@
 		ADA66D2E1B23E6640031B5E7 /* AirProofTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirProofTestViewController.m; sourceTree = "<group>"; };
 		ADA7C8AE1B0B34510078B31A /* AllBottleCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBottleCustomCell.h; sourceTree = "<group>"; };
 		ADA7C8AF1B0B34510078B31A /* AllBottleCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBottleCustomCell.m; sourceTree = "<group>"; };
-		ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottleDetection2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE34BD41AF4E08D00232DCB /* 气瓶检验信息化系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "气瓶检验信息化系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE34BD81AF4E08D00232DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE34BD91AF4E08D00232DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADE34BDB1AF4E08D00232DCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		ADE34BDE1AF4E08D00232DCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ADE34BDF1AF4E08D00232DCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ADE34BE41AF4E08D00232DCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ADE34BED1AF4E08D00232DCB /* BottleDetection2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottleDetection2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE34BED1AF4E08D00232DCB /* 气瓶检验信息化系统Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "气瓶检验信息化系统Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE34BF21AF4E08D00232DCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE34BF31AF4E08D00232DCB /* BottleDetection2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottleDetection2Tests.m; sourceTree = "<group>"; };
 		ADE34BFD1AF4E3D600232DCB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 		ADE34BD51AF4E08D00232DCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */,
-				ADE34BED1AF4E08D00232DCB /* BottleDetection2Tests.xctest */,
+				ADE34BD41AF4E08D00232DCB /* 气瓶检验信息化系统.app */,
+				ADE34BED1AF4E08D00232DCB /* 气瓶检验信息化系统Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,9 +282,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADE34BD31AF4E08D00232DCB /* BottleDetection2 */ = {
+		ADE34BD31AF4E08D00232DCB /* 气瓶检验信息化系统 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADE34BF71AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "BottleDetection2" */;
+			buildConfigurationList = ADE34BF71AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "气瓶检验信息化系统" */;
 			buildPhases = (
 				ADE34BD01AF4E08D00232DCB /* Sources */,
 				ADE34BD11AF4E08D00232DCB /* Frameworks */,
@@ -294,14 +294,14 @@
 			);
 			dependencies = (
 			);
-			name = BottleDetection2;
+			name = "气瓶检验信息化系统";
 			productName = BottleDetection2;
-			productReference = ADE34BD41AF4E08D00232DCB /* BottleDetection2.app */;
+			productReference = ADE34BD41AF4E08D00232DCB /* 气瓶检验信息化系统.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADE34BEC1AF4E08D00232DCB /* BottleDetection2Tests */ = {
+		ADE34BEC1AF4E08D00232DCB /* 气瓶检验信息化系统Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADE34BFA1AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "BottleDetection2Tests" */;
+			buildConfigurationList = ADE34BFA1AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "气瓶检验信息化系统Tests" */;
 			buildPhases = (
 				ADE34BE91AF4E08D00232DCB /* Sources */,
 				ADE34BEA1AF4E08D00232DCB /* Frameworks */,
@@ -312,9 +312,9 @@
 			dependencies = (
 				ADE34BEF1AF4E08D00232DCB /* PBXTargetDependency */,
 			);
-			name = BottleDetection2Tests;
+			name = "气瓶检验信息化系统Tests";
 			productName = BottleDetection2Tests;
-			productReference = ADE34BED1AF4E08D00232DCB /* BottleDetection2Tests.xctest */;
+			productReference = ADE34BED1AF4E08D00232DCB /* 气瓶检验信息化系统Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -335,7 +335,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "BottleDetection2" */;
+			buildConfigurationList = ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "气瓶检验信息化系统" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -348,8 +348,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADE34BD31AF4E08D00232DCB /* BottleDetection2 */,
-				ADE34BEC1AF4E08D00232DCB /* BottleDetection2Tests */,
+				ADE34BD31AF4E08D00232DCB /* 气瓶检验信息化系统 */,
+				ADE34BEC1AF4E08D00232DCB /* 气瓶检验信息化系统Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -430,7 +430,7 @@
 /* Begin PBXTargetDependency section */
 		ADE34BEF1AF4E08D00232DCB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ADE34BD31AF4E08D00232DCB /* BottleDetection2 */;
+			target = ADE34BD31AF4E08D00232DCB /* 气瓶检验信息化系统 */;
 			targetProxy = ADE34BEE1AF4E08D00232DCB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,7 +542,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "气瓶检验信息化系统";
 			};
 			name = Debug;
 		};
@@ -553,7 +553,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "气瓶检验信息化系统";
 			};
 			name = Release;
 		};
@@ -571,7 +571,7 @@
 				);
 				INFOPLIST_FILE = BottleDetection2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "气瓶检验信息化系统Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BottleDetection2.app/BottleDetection2";
 			};
 			name = Debug;
@@ -586,7 +586,7 @@
 				);
 				INFOPLIST_FILE = BottleDetection2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "气瓶检验信息化系统Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BottleDetection2.app/BottleDetection2";
 			};
 			name = Release;
@@ -594,7 +594,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "BottleDetection2" */ = {
+		ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "气瓶检验信息化系统" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE34BF51AF4E08D00232DCB /* Debug */,
@@ -603,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADE34BF71AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "BottleDetection2" */ = {
+		ADE34BF71AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "气瓶检验信息化系统" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE34BF81AF4E08D00232DCB /* Debug */,
@@ -612,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADE34BFA1AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "BottleDetection2Tests" */ = {
+		ADE34BFA1AF4E08D00232DCB /* Build configuration list for PBXNativeTarget "气瓶检验信息化系统Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE34BFB1AF4E08D00232DCB /* Debug */,

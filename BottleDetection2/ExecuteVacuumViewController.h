@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *vacuumOverCell;
 - (IBAction)saveVacuumResult:(id)sender;
 - (IBAction)keyboardHide:(id)sender;
-- (NSString *)makeDate:(int)validTime;
+- (NSString *)makeDate:(NSInteger)validTime;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveVacuumButton;
 @property (nonatomic,strong) NSDictionary *sendParameters;
 @property (nonatomic,strong) NSMutableData *datas;

@@ -42,7 +42,7 @@
     } else {
         NSDictionary *data = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
         self.ipAddress = [data objectForKey:@"ipAddress"];
-        //NSLog(@"%@",self.ipAddress);
+        NSLog(@"%@",self.ipAddress);
     }
     NSString *ipAddressString;
     return ipAddressString;

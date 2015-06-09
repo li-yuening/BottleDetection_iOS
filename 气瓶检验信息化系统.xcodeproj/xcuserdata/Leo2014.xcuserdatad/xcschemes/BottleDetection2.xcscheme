@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
-               BuildableName = "BottleDetection2.app"
-               BlueprintName = "BottleDetection2"
-               ReferencedContainer = "container:BottleDetection2.xcodeproj">
+               BuildableName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.app"
+               BlueprintName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;"
+               ReferencedContainer = "container:&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ADE34BEC1AF4E08D00232DCB"
-               BuildableName = "BottleDetection2Tests.xctest"
-               BlueprintName = "BottleDetection2Tests"
-               ReferencedContainer = "container:BottleDetection2.xcodeproj">
+               BuildableName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;Tests.xctest"
+               BlueprintName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;Tests"
+               ReferencedContainer = "container:&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ADE34BEC1AF4E08D00232DCB"
-               BuildableName = "BottleDetection2Tests.xctest"
-               BlueprintName = "BottleDetection2Tests"
-               ReferencedContainer = "container:BottleDetection2.xcodeproj">
+               BuildableName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;Tests.xctest"
+               BlueprintName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;Tests"
+               ReferencedContainer = "container:&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
-            BuildableName = "BottleDetection2.app"
-            BlueprintName = "BottleDetection2"
-            ReferencedContainer = "container:BottleDetection2.xcodeproj">
+            BuildableName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.app"
+            BlueprintName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;"
+            ReferencedContainer = "container:&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
-            BuildableName = "BottleDetection2.app"
-            BlueprintName = "BottleDetection2"
-            ReferencedContainer = "container:BottleDetection2.xcodeproj">
+            BuildableName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.app"
+            BlueprintName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;"
+            ReferencedContainer = "container:&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADE34BD31AF4E08D00232DCB"
-            BuildableName = "BottleDetection2.app"
-            BlueprintName = "BottleDetection2"
-            ReferencedContainer = "container:BottleDetection2.xcodeproj">
+            BuildableName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.app"
+            BlueprintName = "&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;"
+            ReferencedContainer = "container:&#x6c14;&#x74f6;&#x68c0;&#x9a8c;&#x4fe1;&#x606f;&#x5316;&#x7cfb;&#x7edf;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
