@@ -335,7 +335,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "BottleDetection" */;
+			buildConfigurationList = ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "BottleDetection2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -594,7 +594,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "BottleDetection" */ = {
+		ADE34BCF1AF4E08D00232DCB /* Build configuration list for PBXProject "BottleDetection2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE34BF51AF4E08D00232DCB /* Debug */,
