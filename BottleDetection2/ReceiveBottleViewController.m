@@ -43,7 +43,7 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/ChubuPanduan.html"];
     NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"ChubuPanduan"]];
-    //NSLog(@"%@",strURL);
+
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];

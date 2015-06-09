@@ -33,14 +33,16 @@
     NSUInteger section = [indexPath section];
     NSInteger row = [indexPath row];
     //NSLog(@"%ld",(long)row);
-    if ((row == 0)&&(section == 1)) {
-        self.cpTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        self.cpFalseCell.accessoryType = UITableViewCellAccessoryNone;
+    
+    if (section == 1) {
         self.saveCPButton.enabled = YES;
-    }else if ((row == 1)&&(section = 1)) {
-        self.cpTrueCell.accessoryType = UITableViewCellAccessoryNone;
-        self.cpFalseCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        self.saveCPButton.enabled = YES;
+        if (row == 0) {
+            self.cpTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.cpFalseCell.accessoryType = UITableViewCellAccessoryNone;
+        }else if (row == 1) {
+            self.cpTrueCell.accessoryType = UITableViewCellAccessoryNone;
+            self.cpFalseCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
     }
 }
 
@@ -50,6 +52,7 @@
         [alertView show];
     } else {
         [self startSaveCPRequest];
+        self.saveCPButton.enabled = NO;
     }
 }
 

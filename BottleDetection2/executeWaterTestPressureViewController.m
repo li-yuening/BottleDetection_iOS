@@ -24,14 +24,16 @@
     NSUInteger section = [indexPath section];
     NSInteger row = [indexPath row];
     //NSLog(@"%ld",(long)row);
-    if ((row == 0)&&(section == 1)) {
-        self.waterTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        self.waterFalseCell.accessoryType = UITableViewCellAccessoryNone;
+    if (section == 1) {
         self.saveWaterButton.enabled = YES;
-    }else if ((row == 1)&&(section = 1)) {
-        self.waterTrueCell.accessoryType = UITableViewCellAccessoryNone;
-        self.waterFalseCell.accessoryType = UITableViewCellAccessoryCheckmark;
-        self.saveWaterButton.enabled = YES;
+        if (row == 0) {
+            self.waterTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.waterFalseCell.accessoryType = UITableViewCellAccessoryNone;
+            
+        }else if (row == 1) {
+            self.waterTrueCell.accessoryType = UITableViewCellAccessoryNone;
+            self.waterFalseCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
     }
 }
 

@@ -100,7 +100,7 @@
 }
 
 - (IBAction)saveNDResult:(id)sender {
-    if ([self.noneDestructivePosition.text isEqualToString:@""]) {
+    if (([self.noneDestructivePosition.text isEqualToString:@""])&&(self.noneDestructiveResultSegment.selectedSegmentIndex == 1)) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未填写部位编号，无法保存！" message:@"" delegate:nil cancelButtonTitle:@"马上写" otherButtonTitles: nil];
         [alertView show];
     } else {

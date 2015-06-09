@@ -125,8 +125,8 @@
 }
 
 - (void)sendAddBottleRequest {
-    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/Login.html"];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //NSString *strURL = [[NSString alloc] initWithFormat:@"file:///Volumes/DATA/servlet/AllBottle.html"];
     NSString *strURL = [[NSString alloc] initWithFormat:@"%@",[appDelegate.ipAddress stringByAppendingString:@"AddBottle"]];
     
     NSURL *url = [NSURL URLWithString:[strURL URLEncodedString]];
