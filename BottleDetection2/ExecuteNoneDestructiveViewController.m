@@ -100,7 +100,12 @@
 }
 
 - (IBAction)saveNDResult:(id)sender {
-    [self startNDRequest];
+    if ([self.noneDestructivePosition.text isEqualToString:@""]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"未填写部位编号，无法保存！" message:@"" delegate:nil cancelButtonTitle:@"马上写" otherButtonTitles: nil];
+        [alertView show];
+    } else {
+        [self startNDRequest];
+    }
 }
 
 @end

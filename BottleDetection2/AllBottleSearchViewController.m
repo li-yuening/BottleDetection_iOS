@@ -22,12 +22,16 @@
     [super viewDidLoad];
     self.isFirstLoad = self.isFirstLoad + 1;
     self.pagePresent = 1;
-    self.navigationController.toolbarHidden = NO;
     self.previousPageButton.enabled = false;
     self.nextPageButton.enabled = false;
     if (self.isFirstLoad == 1) {
         [self startRequest];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.toolbarHidden = NO;
 }
 
 - (IBAction)previousPage:(id)sender {

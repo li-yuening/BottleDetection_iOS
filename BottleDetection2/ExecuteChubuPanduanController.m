@@ -26,6 +26,7 @@
     }else if ([[self.sendParameters objectForKey:@"bottleType"] intValue] == 1) {
         self.bottleTypeLabel.text = @"缠绕瓶";
     }
+    self.saveCPButton.enabled = NO;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -35,9 +36,11 @@
     if ((row == 0)&&(section == 1)) {
         self.cpTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
         self.cpFalseCell.accessoryType = UITableViewCellAccessoryNone;
+        self.saveCPButton.enabled = YES;
     }else if ((row == 1)&&(section = 1)) {
         self.cpTrueCell.accessoryType = UITableViewCellAccessoryNone;
         self.cpFalseCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.saveCPButton.enabled = YES;
     }
 }
 
@@ -47,7 +50,6 @@
         [alertView show];
     } else {
         [self startSaveCPRequest];
-    self.saveCPButton.enabled = NO;
     }
 }
 

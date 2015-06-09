@@ -17,6 +17,7 @@
     self.bottleDetectNumberLabel.text = [self.sendParameters objectForKey:@"bottleDetectNumber"];
     self.bottleNumberLabel.text = [self.sendParameters objectForKey:@"bottleNumber"];
     self.carNumberLabel.text = [self.sendParameters objectForKey:@"carNumber"];
+    self.saveWaterButton.enabled = NO;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -26,9 +27,11 @@
     if ((row == 0)&&(section == 1)) {
         self.waterTrueCell.accessoryType = UITableViewCellAccessoryCheckmark;
         self.waterFalseCell.accessoryType = UITableViewCellAccessoryNone;
+        self.saveWaterButton.enabled = YES;
     }else if ((row == 1)&&(section = 1)) {
         self.waterTrueCell.accessoryType = UITableViewCellAccessoryNone;
         self.waterFalseCell.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.saveWaterButton.enabled = YES;
     }
 }
 
@@ -38,7 +41,6 @@
         [alertView show];
     } else {
         [self startSaveWaterRequest];
-        self.saveWaterButton.enabled = NO;
     }
 }
 
