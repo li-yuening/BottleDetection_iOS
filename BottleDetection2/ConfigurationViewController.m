@@ -24,7 +24,7 @@
         NSString *ipTail = @":8080/BottleDetection2/servlet/";
         appDelegate.ipAddress = [NSString stringWithFormat:@"%@%@%@",ipHead,self.ipAddressLabel.text,ipTail];
         [self writeIPPlist:appDelegate.ipAddress];
-        //NSLog(@"%@",appDelegate.ipAddress);
+        //NSLog(@"修改 %@",appDelegate.ipAddress);
     }
     //[self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];

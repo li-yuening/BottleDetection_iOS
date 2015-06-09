@@ -21,10 +21,12 @@
     // Override point for customization after application launch.
     //self.ipAddress = @"http://192.168.1.109:8080/BottleDetection2/servlet/";
     self.ipAddress = [self getIPAddress];
+    //NSLog(@"读取文件 %@",self.ipAddress);
     return YES;
 }
 
 - (NSString *)getIPAddress {
+    NSString *ipAddressString;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     //获取完整路径
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -41,10 +43,8 @@
         [dictplist writeToFile:plistPath atomically:YES];
     } else {
         NSDictionary *data = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-        self.ipAddress = [data objectForKey:@"ipAddress"];
-        NSLog(@"%@",self.ipAddress);
+        ipAddressString = [data objectForKey:@"ipAddress"];
     }
-    NSString *ipAddressString;
     return ipAddressString;
 }
 

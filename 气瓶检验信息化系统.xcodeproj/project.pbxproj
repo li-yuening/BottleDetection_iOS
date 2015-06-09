@@ -572,7 +572,7 @@
 				INFOPLIST_FILE = BottleDetection2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "气瓶检验信息化系统Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BottleDetection2.app/BottleDetection2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/气瓶检验信息化系统.app/气瓶检验信息化系统";
 			};
 			name = Debug;
 		};
@@ -587,7 +587,7 @@
 				INFOPLIST_FILE = BottleDetection2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "气瓶检验信息化系统Tests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BottleDetection2.app/BottleDetection2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/气瓶检验信息化系统.app/气瓶检验信息化系统";
 			};
 			name = Release;
 		};
