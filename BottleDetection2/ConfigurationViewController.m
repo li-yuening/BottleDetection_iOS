@@ -11,6 +11,12 @@
 
 @implementation ConfigurationViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    self.ipAddressLabel.placeholder = appDelegate.shortIP;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     self.tableView.scrollEnabled = NO;
     self.navigationController.toolbarHidden = YES;
@@ -20,10 +26,8 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     if (![self.ipAddressLabel.text isEqualToString:@""]) {
-        NSString *ipHead = @"http://";
-        NSString *ipTail = @":8080/BottleDetection2/servlet/";
-        appDelegate.ipAddress = [NSString stringWithFormat:@"%@%@%@",ipHead,self.ipAddressLabel.text,ipTail];
-        [self writeIPPlist:appDelegate.ipAddress];
+        appDelegate.shortIP = self.ipAddressLabel.text;
+        [self writeIPPlist:appDelegate.shortIP];
         //NSLog(@"修改 %@",appDelegate.ipAddress);
     }
     //[self dismissViewControllerAnimated:YES completion:nil];

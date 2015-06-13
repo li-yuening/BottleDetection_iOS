@@ -14,13 +14,15 @@
 
 @implementation AppDelegate
 @synthesize ipAddress;
+@synthesize shortIP;
 @synthesize operatorName;
 @synthesize operatorRights;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //self.ipAddress = @"http://192.168.1.109:8080/BottleDetection2/servlet/";
-    self.ipAddress = [self getIPAddress];
+    self.shortIP = [self getIPAddress];
+    self.ipAddress = [self makeFullIP:self.shortIP];
     //NSLog(@"读取文件 %@",self.ipAddress);
     return YES;
 }
@@ -38,14 +40,21 @@
         //NSLog(@"bucunzai");
         NSMutableDictionary *dictplist = [[NSMutableDictionary alloc ] init];
         //设置属性值
-        [dictplist setObject:@"http://192.168.1.109:8080/BottleDetection2/servlet/" forKey:@"ipAddress"];
+        [dictplist setObject:@"192.168.1.109" forKey:@"ipAddress"];
         //写入文件
         [dictplist writeToFile:plistPath atomically:YES];
+        ipAddressString = @"192.168.1.109";
     } else {
         NSDictionary *data = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
         ipAddressString = [data objectForKey:@"ipAddress"];
     }
     return ipAddressString;
+}
+
+- (NSString *)makeFullIP:ip {
+    NSString *fullIP = [NSString stringWithFormat:@"http://%@:8080/BottleDetection2/servlet/",ip];
+    NSLog(@"%@",fullIP);
+    return fullIP;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
