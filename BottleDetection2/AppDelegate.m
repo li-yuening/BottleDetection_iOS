@@ -53,7 +53,7 @@
 
 - (NSString *)makeFullIP:ip {
     NSString *fullIP = [NSString stringWithFormat:@"http://%@:8080/BottleDetection2/servlet/",ip];
-    NSLog(@"%@",fullIP);
+    //NSLog(@"%@",fullIP);
     return fullIP;
 }
 

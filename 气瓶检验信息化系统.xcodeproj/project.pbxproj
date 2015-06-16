@@ -472,8 +472,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9FSH7R98A9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -495,7 +495,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "54921a88-af43-4476-9b7d-2115e3593cc5";
+				PROVISIONING_PROFILE = "8179d9d1-ed14-4cc2-8722-049caf7305c9";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -517,8 +517,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9FSH7R98A9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -533,7 +533,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "54921a88-af43-4476-9b7d-2115e3593cc5";
+				PROVISIONING_PROFILE = "8179d9d1-ed14-4cc2-8722-049caf7305c9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -543,11 +543,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9FSH7R98A9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "气瓶检验信息化系统";
-				PROVISIONING_PROFILE = "54921a88-af43-4476-9b7d-2115e3593cc5";
+				PROVISIONING_PROFILE = "8179d9d1-ed14-4cc2-8722-049caf7305c9";
 			};
 			name = Debug;
 		};
@@ -555,11 +555,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9FSH7R98A9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				INFOPLIST_FILE = BottleDetection2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "气瓶检验信息化系统";
-				PROVISIONING_PROFILE = "54921a88-af43-4476-9b7d-2115e3593cc5";
+				PROVISIONING_PROFILE = "8179d9d1-ed14-4cc2-8722-049caf7305c9";
 			};
 			name = Release;
 		};
@@ -567,7 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9FSH7R98A9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -579,7 +579,7 @@
 				INFOPLIST_FILE = BottleDetection2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "气瓶检验信息化系统Tests";
-				PROVISIONING_PROFILE = "54921a88-af43-4476-9b7d-2115e3593cc5";
+				PROVISIONING_PROFILE = "8179d9d1-ed14-4cc2-8722-049caf7305c9";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/气瓶检验信息化系统.app/气瓶检验信息化系统";
 			};
 			name = Debug;
@@ -588,7 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (9FSH7R98A9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Wei Feng Hou (5S9CUXNU3G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -596,7 +596,7 @@
 				INFOPLIST_FILE = BottleDetection2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "气瓶检验信息化系统Tests";
-				PROVISIONING_PROFILE = "54921a88-af43-4476-9b7d-2115e3593cc5";
+				PROVISIONING_PROFILE = "8179d9d1-ed14-4cc2-8722-049caf7305c9";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/气瓶检验信息化系统.app/气瓶检验信息化系统";
 			};
 			name = Release;
